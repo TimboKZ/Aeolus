@@ -1,6 +1,11 @@
 Aeolus Changelog
 ============
 
+**v0.0.1.3** 26 Dec 2014
+
+* Fixed the self post content display bug introduced in the previous version
+
+
 **v0.0.1.2** 26 Dec 2014
 
 * Fixed the wiki bug introduced in the previous version
