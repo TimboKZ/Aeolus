@@ -1,10 +1,14 @@
 Aeolus Changelog
 ============
 
+**v0.0.1.4** 26 Dec 2014
+
+* Improved styling for the subreddit bar on the top of the page
+* Added a customisation option to hide the subreddit creator and age.
+
 **v0.0.1.3** 26 Dec 2014
 
 * Fixed the self post content display bug introduced in the previous version
-
 
 **v0.0.1.2** 26 Dec 2014
 
@@ -20,6 +24,7 @@ Aeolus Changelog
 * Improved login form styling
 * Improved RES subscribe buttons styling
 * Improved styling for `sumbit a link/self post` and `edit stylesheet` pages
+* Added styling for post information tab
 * Added styling for `subreddit settings` page
 
 **v0.0.1.0** 25 Dec 2014
