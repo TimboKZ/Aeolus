@@ -1,5 +1,5 @@
 /*
-  Aeolus v0.0.1.1 (http://www.reddit.com/r/Aeolus)
+  Aeolus v0.0.1.2 (http://www.reddit.com/r/Aeolus)
   Copyright (c) 2014 Timur Kuzhagaliyev (TimboKZ)
 */
 .md {
@@ -1361,7 +1361,7 @@ body {
 }
 .side .spacer .titlebox .subButtons .RESshortcut.remove:hover,
 .side .spacer .titlebox .subButtons .REStoggle.remove:hover {
-  background-color: #f2f1ec;
+  background-color: #f2f1ec !important;
   color: #3e3e3e;
 }
 .side .spacer .titlebox .subscribers {
@@ -1616,7 +1616,7 @@ body {
   transition: all 0.1s linear;
 }
 .wiki-page-content {
-  margin: 0px 0px 20px 0px;
+  margin: 0px 0px 20px 0px !important;
 }
 .wiki-page-content > hr {
   display: none;
@@ -1856,7 +1856,7 @@ body > .content {
   position: relative;
 }
 body > .content:after {
-  content: 'Aeolus CSS v0.0.1.1 (/r/Aeolus)';
+  content: 'Aeolus CSS v0.0.1.2 (/r/Aeolus)';
   background-color: #c1c1c1;
   color: #e6e5df;
   position: absolute;

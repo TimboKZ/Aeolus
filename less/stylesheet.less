@@ -1,5 +1,5 @@
 /*
-  Aeolus v0.0.1.1 (http://www.reddit.com/r/Aeolus)
+  Aeolus v0.0.1.2 (http://www.reddit.com/r/Aeolus)
   Copyright (c) 2014 Timur Kuzhagaliyev (TimboKZ)
 */
 
@@ -45,7 +45,7 @@
 
 // [!------------- Variables Start -------------!]
 @aeolus: #7b9af4;
-@version: '0.0.1.1';
+@version: '0.0.1.2';
 @font: Verdana, Arial, Sans-Serif;
 
 @background: #c1c1c1;
@@ -1104,7 +1104,7 @@ body {
             background-color:@aeolus !important;
             color:@foreground;
             &:hover {
-              background-color:@foreground;
+              background-color:@foreground !important;
               color:@sidebar-font;
             }
           }
@@ -1273,7 +1273,7 @@ body {
   }
 }
 .wiki-page-content {
-  margin:0px 0px 20px 0px;
+  margin:0px 0px 20px 0px !important;
   & > hr {
     display:none;
   }

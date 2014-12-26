@@ -1,7 +1,12 @@
 Aeolus Changelog
 ============
 
+**v0.0.1.2** 26 Dec 2014
+
+* Fixed the wiki bug introduced in the previous version
+
 **v0.0.1.1** 26 Dec 2014
+
 * Improved general `stylesheet.less` structure
 * Optimised the style sheet removing repetitive CSS rules, decreasing the style sheet size by 30kb
 * Improved RES compatibility
@@ -13,4 +18,5 @@ Aeolus Changelog
 * Added styling for `subreddit settings` page
 
 **v0.0.1.0** 25 Dec 2014
+
 * Initial release
