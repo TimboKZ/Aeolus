@@ -1,6 +1,10 @@
 Aeolus Changelog
 ============
 
+**v0.0.1.5** 26 Dec 2014
+
+* Fixed a content bug were the entry of a post wouldn't be displayed correctly
+
 **v0.0.1.4** 26 Dec 2014
 
 * Improved styling for the subreddit bar on the top of the page

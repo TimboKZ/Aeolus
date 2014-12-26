@@ -1,5 +1,5 @@
 /*
-  Aeolus v0.0.1.4 (http://www.reddit.com/r/Aeolus)
+  Aeolus v0.0.1.5 (http://www.reddit.com/r/Aeolus)
   Copyright (c) 2014 Timur Kuzhagaliyev (TimboKZ)
 */
 .md {
@@ -1977,7 +1977,7 @@ body > .content {
   position: relative;
 }
 body > .content:after {
-  content: 'Aeolus CSS v0.0.1.4 (/r/Aeolus)';
+  content: 'Aeolus CSS v0.0.1.5 (/r/Aeolus)';
   background-color: #c1c1c1;
   color: #e6e5df;
   position: absolute;
@@ -2144,9 +2144,6 @@ body > .content #siteTable .thing {
 body > .content #siteTable .thing.link.last-clicked {
   overflow: visible !important;
   border: none;
-}
-body > .content #siteTable .thing.link.last-clicked .entry {
-  overflow: visible !important;
 }
 body > .content #siteTable .thing.self .thumbnail {
   background-image: url('%%aeolus-post-sprite%%') !important;
