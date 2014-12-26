@@ -1,37 +1,301 @@
 /*
-  Aeolus v0.0.1.0 (http://www.reddit.com/r/Aeolus)
+  Aeolus v0.0.1.1 (http://www.reddit.com/r/Aeolus)
   Copyright (c) 2014 Timur Kuzhagaliyev (TimboKZ)
 */
-html body {
+.md {
+  padding: 0px 20px 20px 20px;
+  background-color: #ffffff;
+  border-radius: 0px;
+  position: relative;
+  border: none;
+}
+.md h1 {
+  border-bottom: solid 2px #e6e5df !important;
+  margin: 20px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 5px 0px !important;
+  font-size: 30px !important;
+}
+.md h2 {
+  border-bottom: solid 1px #e6e5df !important;
+  margin: 20px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 24px !important;
+}
+.md h3 {
+  border-bottom: solid 1px #e6e5df !important;
+  margin: 20px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 18px !important;
+}
+.md h4 {
+  margin: 20px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 18px !important;
+}
+.md h5 {
+  margin: 20px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: bold !important;
+  padding: 3px 0px !important;
+  font-size: 14px !important;
+}
+.md h6 {
+  margin: 20px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 14px !important;
+}
+.md img {
+  border: solid 1px #e6e5df !important;
+  max-width: 100%;
+}
+.md p {
+  margin: 20px 0px 0px 0px !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+}
+.md a {
+  display: inline-block;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+  color: #7b9af4;
+  padding: 2px 2px;
+  z-index: 1;
+}
+.md a:visited {
+  color: #7b9af4;
+}
+.md a:visited:hover {
+  color: #ffffff;
+}
+.md a:visited:hover:before {
+  background-color: #c4c2b4;
+}
+.md a:visited:before {
+  background-color: #dbd9d1;
+}
+.md a:hover {
+  color: #ffffff;
+}
+.md a:hover code {
+  background-color: transparent !important;
+}
+.md a:hover:before {
+  background-color: #7b9af4;
+  height: 100%;
+}
+.md a:before {
+  background-color: #7b9af4;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: absolute;
+  content: '';
+  z-index: -1;
+  height: 2px;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+.md ul {
+  margin: 15px 0px 0px 0px !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+  list-style: none;
+  display: block;
+}
+.md ul li {
+  background-color: #f8f8f5;
+  margin: 5px 0px 0px 0px;
+  padding: 5px;
+}
+.md ul li ul,
+.md ul li ol {
+  margin: 0px 0px 0px 0px !important;
+}
+.md ul li > ul li,
+.md ul li > ol li {
+  background-color: #ffffff;
+}
+.md ul li > ul li:before,
+.md ul li > ol li:before {
+  background-color: #ffffff;
+}
+.md ul li > ul li > ul li,
+.md ul li > ol li > ul li,
+.md ul li > ul li > ol li,
+.md ul li > ol li > ol li {
+  background-color: #f8f8f5;
+}
+.md ul li > ul li > ul li:before,
+.md ul li > ol li > ul li:before,
+.md ul li > ul li > ol li:before,
+.md ul li > ol li > ol li:before {
+  background-color: #f8f8f5;
+}
+.md ol {
+  list-style-position: inside !important;
+  margin: 15px 0px 0px 0px !important;
+  list-style-type: decimal !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+  display: block;
+}
+.md ol li {
+  background-color: #f8f8f5;
+  margin: 5px 0px 0px 0px;
+  padding: 5px;
+}
+.md ol li ul,
+.md ol li ol {
+  margin: 0px 0px 0px 0px !important;
+}
+.md ol li > ul li,
+.md ol li > ol li {
+  background-color: #ffffff;
+}
+.md ol li > ul li:before,
+.md ol li > ol li:before {
+  background-color: #ffffff;
+}
+.md ol li > ul li > ul li,
+.md ol li > ol li > ul li,
+.md ol li > ul li > ol li,
+.md ol li > ol li > ol li {
+  background-color: #f8f8f5;
+}
+.md ol li > ul li > ul li:before,
+.md ol li > ol li > ul li:before,
+.md ol li > ul li > ol li:before,
+.md ol li > ol li > ol li:before {
+  background-color: #f8f8f5;
+}
+.md code {
+  background-color: #f2f1ec !important;
+  display: inline-block !important;
+  padding: 2px 4px !important;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.md blockquote {
+  border-left: solid 5px #e6e5df !important;
+  background-color: #f2f1ec !important;
+  padding: 5px 10px 5px 10px !important;
+  margin: 20px 0px 0px 0px !important;
+}
+.md blockquote p {
+  margin: 5px 0px 5px 0px !important;
+}
+.md blockquote blockquote {
+  margin: 5px 0px 5px 0px !important;
+}
+.md pre {
+  background-image: url(%%aeolus-md-pre%%);
+  background-color: #f2f1ec;
+  padding: 18px 10px 18px 52px;
+  margin: 20px 0px 0px 0px;
+  position: relative;
+  line-height: 18px;
+  font-size: 12px;
+  display: block;
+  width: auto;
+}
+.md pre:before {
+  content: '#  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126  127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193  194  195  196  197  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  225  226  227  228  229  230  231  232  233  234  235  236  237  238  239  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  256  257  258  259  260  261  262  263  264  265  266  267  268  269  270  271  272  273  274  275  276  277  278  279  280  281  282  283  284  285  286  287  288  289  290  291  292  293  294  295  296  297  298  299  300  301  302  303  304  305  306  307  308  309  310  311  312  313  314  315  316  317  318  319  320  321  322  323  324  325  326  327  328  329  330  331  332  333  334  335  336  337  338  339  340  341  342  343  344  345  346  347  348  349  350  351  352  353  354  355  356  357  358  359  360  361  362  363  364  365  366  367  368  369  370  371  372  373  374  375  376  377  378  379  380  381  382  383  384  385  386  387  388  389  390  391  392  393  394  395  396  397  398  399  400  401  402  403  404  405  406  407  408  409  410  411  412  413  414  415  416  417  418  419  420  421  422  423  424  425  426  427  428  429  430  431  432  433  434  435  436  437  438  439  440  441  442  443  444  445  446  447  448  449  450  451  452  453  454  455  456  457  458  459  460  461  462  463  464  465  466  467  468  469  470  471  472  473  474  475  476  477  478  479  480  481  482  483  484  485  486  487  488  489  490  491  492  493  494  495  496  497  498  499  500  ';
+  border-right: solid 2px #c1c1c1;
+  background-color: #f2f1ec;
+  padding: 0px 10px 0px 5px;
+  white-space: pre-wrap;
+  position: absolute;
+  line-height: 18px;
+  text-align: right;
+  overflow: hidden;
+  font-size: 12px;
+  height: 100%;
+  width: 25px;
+  left: 0px;
+  top: 0px;
+}
+.md pre:after {
+  background-color: #f2f1ec;
+  position: absolute;
+  height: 18px;
+  content: '';
+  bottom: 0px;
+  width: 40px;
+  z-index: 1;
+  left: 0px;
+}
+.md pre code {
+  background-color: transparent !important;
+  display: block !important;
+  padding: 0px !important;
+}
+.md table {
+  border-color: #f2f1ec !important;
+  margin: 15px 0px 0px 0px !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+}
+.md table thead {
+  background-color: #f2f1ec !important;
+}
+.md table thead th {
+  font-weight: normal;
+  padding: 2px 4px;
+}
+body {
   background-color: #c1c1c1;
   max-width: 1280px;
+  font-family: Verdana, Arial, Sans-Serif;
   padding: 0px 20px;
   margin: 0px auto;
 }
-html body #header {
+#header {
   background-color: transparent;
-  height: 140px;
+  height: auto;
   border: none;
 }
-html body #header #sr-header-area {
+#sr-header-area {
   background-color: transparent;
-  margin: 0px 0px 80px 0px;
+  margin: 0px 0px 40px 0px;
   height: 20px;
   border: none;
 }
-html body #header #sr-header-area .width-clip {
+#sr-header-area {
+  margin: 0px 0px 80px 0px;
+}
+#sr-header-area .width-clip {
   background-color: transparent;
 }
-html body #header #header-bottom-left {
+#header-bottom-left {
   background-color: #343844;
   margin: 0px 320px 0px 0px;
   padding: 0px;
   height: 40px;
 }
-html body #header #header-bottom-left #header-img {
+#header-bottom-left #header-img {
   display: none;
 }
-html body #header #header-bottom-left .pagename {
+#header-bottom-left .pagename {
   text-transform: lowercase;
   padding: 0px 0px 0px 40px;
   margin: 0px 0px 0px -4px;
@@ -47,7 +311,7 @@ html body #header #header-bottom-left .pagename {
   height: 40px;
   width: 0px;
 }
-html body #header #header-bottom-left .pagename a {
+#header-bottom-left .pagename a {
   background-color: #30333e;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -56,7 +320,7 @@ html body #header #header-bottom-left .pagename a {
   transition: all 0.3s linear;
   text-indent: -9999px;
   position: absolute;
-  background-image: url(%%aeolus-sprite%%) !important;
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: 0px 0px !important;
@@ -68,7 +332,7 @@ html body #header #header-bottom-left .pagename a {
   left: 0px;
   top: 0px;
 }
-html body #header #header-bottom-left .pagename a:hover {
+#header-bottom-left .pagename a:hover {
   background-color: #292c36;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -76,7 +340,7 @@ html body #header #header-bottom-left .pagename a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #header #header-bottom-left .tabmenu {
+#header-bottom-left .tabmenu {
   background-color: transparent;
   vertical-align: middle;
   display: inline-block;
@@ -85,7 +349,7 @@ html body #header #header-bottom-left .tabmenu {
   margin: 0px;
   width: auto;
 }
-html body #header #header-bottom-left .tabmenu li {
+#header-bottom-left .tabmenu li {
   background-color: transparent;
   vertical-align: middle;
   display: inline-block;
@@ -94,13 +358,13 @@ html body #header #header-bottom-left .tabmenu li {
   margin: 0px;
   width: auto;
 }
-html body #header #header-bottom-left .tabmenu li.selected a {
+#header-bottom-left .tabmenu li.selected a {
   color: #ffffff;
   font-weight: normal;
   font-style: italic;
   border: none;
 }
-html body #header #header-bottom-left .tabmenu li a {
+#header-bottom-left .tabmenu li a {
   background-color: transparent;
   color: #f2f2f2;
   -webkit-transition: all 0.3s linear;
@@ -115,19 +379,19 @@ html body #header #header-bottom-left .tabmenu li a {
   display: block;
   height: 40px;
 }
-html body #header #header-bottom-left .tabmenu li a[href*="/rising"] {
+#header-bottom-left .tabmenu li a[href*="/rising"] {
   display: none !important;
 }
-html body #header #header-bottom-left .tabmenu li a[href*="/controversial"] {
+#header-bottom-left .tabmenu li a[href*="/controversial"] {
   display: none !important;
 }
-html body #header #header-bottom-left .tabmenu li a[href*="/gilded"] {
+#header-bottom-left .tabmenu li a[href*="/gilded"] {
   display: none !important;
 }
-html body #header #header-bottom-left .tabmenu li a[href*="/ads"] {
+#header-bottom-left .tabmenu li a[href*="/ads"] {
   display: none !important;
 }
-html body #header #header-bottom-left .tabmenu li a:hover {
+#header-bottom-left .tabmenu li a:hover {
   background-color: #2d313b;
   color: #ffffff;
   -webkit-transition: all 0.1s linear;
@@ -136,26 +400,26 @@ html body #header #header-bottom-left .tabmenu li a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #header #header-bottom-right {
+#header-bottom-right {
   background-color: transparent;
+  padding: 0px !important;
   line-height: normal;
   border-radius: 0px;
   position: absolute;
   text-align: right;
   width: 320px;
-  padding: 0px;
   height: 40px;
   bottom: 0px;
   margin: 0px;
   right: 0px;
 }
-html body #header #header-bottom-right span.separator {
+#header-bottom-right span.separator {
   display: none;
 }
-html body #header #header-bottom-right #userbarToggle {
+#header-bottom-right #userbarToggle {
   display: none;
 }
-html body #header #header-bottom-right .user {
+#header-bottom-right .user {
   vertical-align: middle;
   display: inline-block;
   -webkit-transition: all 0.3s linear;
@@ -176,7 +440,7 @@ html body #header #header-bottom-right .user {
   margin: 0px;
   right: 0px;
 }
-html body #header #header-bottom-right .user > a {
+#header-bottom-right .user > a {
   margin: 0px 0px 0px 0px !important;
   vertical-align: middle;
   display: inline-block;
@@ -192,7 +456,7 @@ html body #header #header-bottom-right .user > a {
   height: 40px;
   width: auto;
 }
-html body #header #header-bottom-right .user > a:hover {
+#header-bottom-right .user > a:hover {
   background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -200,35 +464,7 @@ html body #header #header-bottom-right .user > a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #header #header-bottom-right .user #RESAccountSwitcherIcon {
-  vertical-align: middle;
-  width: 40px !important;
-  display: inline-block;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  background-image: url(%%aeolus-sprite%%) !important;
-  background-repeat: no-repeat !important;
-  background-size: 160px 120px !important;
-  background-position: 0px -80px !important;
-  line-height: normal;
-  font-size: 0px;
-  padding: 0px;
-  height: 40px;
-  margin: 0px;
-  top: 0px;
-}
-html body #header #header-bottom-right .user #RESAccountSwitcherIcon:hover {
-  background-color: #f2f1ec;
-  -webkit-transition: all 0.1s linear;
-  -khtml-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-html body #header #header-bottom-right .user .userkarma {
+#header-bottom-right .user .userkarma {
   background-color: transparent;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -243,6 +479,7 @@ html body #header #header-bottom-right .user .userkarma {
   padding: 5px 10px;
   text-align: left;
   font-size: 12px;
+  cursor: default;
   display: block;
   border: none;
   height: 30px;
@@ -250,36 +487,92 @@ html body #header #header-bottom-right .user .userkarma {
   right: 100%;
   top: 0px;
 }
-html body #header #header-bottom-right .user .userkarma a {
+#header-bottom-right .user .userkarma a {
   color: #3e3e3e;
 }
-html body #header #header-bottom-right #mail {
-  vertical-align: middle;
+#header-bottom-right #RESAccountSwitcherIcon {
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: normal !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 40px !important;
   width: 40px !important;
-  display: inline-block;
+  background-image: url('%%aeolus-sprite%%') !important;
+  background-repeat: no-repeat !important;
+  background-size: 160px 120px !important;
+  background-position: 0px -80px !important;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
   -moz-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
-  background-image: url(%%aeolus-sprite%%) !important;
-  background-repeat: no-repeat !important;
-  background-size: 160px 120px !important;
-  background-position: 0px -40px !important;
-  line-height: normal;
-  font-size: 0px;
-  padding: 0px;
-  height: 40px;
   margin: 0px;
   top: 0px;
 }
-html body #header #header-bottom-right #mail.havemail {
-  background-image: url(%%aeolus-sprite%%) !important;
+#header-bottom-right #RESAccountSwitcherIcon:hover {
+  background-color: #f2f1ec;
+  -webkit-transition: all 0.1s linear;
+  -khtml-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+#header-bottom-right #mail {
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: normal !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 40px !important;
+  width: 40px !important;
+  background-image: url('%%aeolus-sprite%%') !important;
+  background-repeat: no-repeat !important;
+  background-size: 160px 120px !important;
+  background-position: 0px -40px !important;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0px;
+  top: 0px;
+}
+#header-bottom-right #mail:hover {
+  background-color: #f2f1ec;
+  -webkit-transition: all 0.1s linear;
+  -khtml-transition: all 0.1s linear;
+  -moz-transition: all 0.1s linear;
+  -o-transition: all 0.1s linear;
+  transition: all 0.1s linear;
+}
+#header-bottom-right #mail.havemail {
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: -40px -40px !important;
 }
-html body #header #header-bottom-right #mail:hover {
+#header-bottom-right #modmail {
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: normal !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 40px !important;
+  width: 40px !important;
+  background-image: url('%%aeolus-sprite%%') !important;
+  background-repeat: no-repeat !important;
+  background-size: 160px 120px !important;
+  background-position: -80px -40px !important;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0px;
+  top: 0px;
+}
+#header-bottom-right #modmail:hover {
   background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -287,41 +580,13 @@ html body #header #header-bottom-right #mail:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #header #header-bottom-right #modmail {
-  vertical-align: middle;
-  background-image: url(%%aeolus-sprite%%) !important;
-  background-repeat: no-repeat !important;
-  background-size: 160px 120px !important;
-  background-position: -80px -40px !important;
-  display: inline-block;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  line-height: normal;
-  font-size: 0px;
-  padding: 0px;
-  height: 40px;
-  margin: 0px;
-  width: 40px;
-  top: 0px;
-}
-html body #header #header-bottom-right #modmail.havemail {
-  background-image: url(%%aeolus-sprite%%) !important;
+#header-bottom-right #modmail.havemail {
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: -120px -40px !important;
 }
-html body #header #header-bottom-right #modmail:hover {
-  background-color: #f2f1ec;
-  -webkit-transition: all 0.1s linear;
-  -khtml-transition: all 0.1s linear;
-  -moz-transition: all 0.1s linear;
-  -o-transition: all 0.1s linear;
-  transition: all 0.1s linear;
-}
-html body #header #header-bottom-right ul.flat-list {
+#header-bottom-right ul.flat-list {
   vertical-align: middle;
   display: inline-block;
   -webkit-transition: all 0.3s linear;
@@ -334,7 +599,7 @@ html body #header #header-bottom-right ul.flat-list {
   height: 40px;
   margin: 0px;
 }
-html body #header #header-bottom-right ul.flat-list li {
+#header-bottom-right ul.flat-list li {
   vertical-align: middle;
   display: inline-block;
   line-height: normal;
@@ -342,17 +607,27 @@ html body #header #header-bottom-right ul.flat-list li {
   height: 40px;
   margin: 0px;
 }
-html body #header #header-bottom-right ul.flat-list li a.pref-lang {
-  background-image: url(%%aeolus-sprite%%) !important;
+#header-bottom-right ul.flat-list li a.pref-lang {
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: normal !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 40px !important;
+  width: 40px !important;
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: -120px 0px !important;
-  font-size: 0px;
-  display: block;
-  height: 40px;
-  width: 40px;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0px;
+  top: 0px;
 }
-html body #header #header-bottom-right ul.flat-list li a.pref-lang:hover {
+#header-bottom-right ul.flat-list li a.pref-lang:hover {
   background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -360,35 +635,39 @@ html body #header #header-bottom-right ul.flat-list li a.pref-lang:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #header #header-bottom-right #openRESPrefs {
+#header-bottom-right #openRESPrefs {
   vertical-align: middle !important;
   display: inline-block !important;
-  -webkit-transition: all 0.3s linear !important;
-  -khtml-transition: all 0.3s linear !important;
-  -moz-transition: all 0.3s linear !important;
-  -o-transition: all 0.3s linear !important;
-  transition: all 0.3s linear !important;
   line-height: normal !important;
   font-size: 0px !important;
+  padding: 0px !important;
   height: 40px !important;
   width: 40px !important;
-  background-image: url(%%aeolus-sprite%%) !important;
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: -80px 0px !important;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0px;
+  top: 0px;
+  cursor: pointer;
 }
-html body #header #header-bottom-right #openRESPrefs .gearIcon {
-  display: none !important;
-}
-html body #header #header-bottom-right #openRESPrefs:hover {
-  background-color: #f2f1ec !important;
+#header-bottom-right #openRESPrefs:hover {
+  background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #header #header-bottom-right form.logout {
+#header-bottom-right #openRESPrefs .gearIcon {
+  display: none !important;
+}
+#header-bottom-right form.logout {
   vertical-align: middle;
   display: inline-block;
   -webkit-transition: all 0.3s linear;
@@ -401,17 +680,27 @@ html body #header #header-bottom-right form.logout {
   height: 40px;
   margin: 0px;
 }
-html body #header #header-bottom-right form.logout a {
-  background-image: url(%%aeolus-sprite%%) !important;
+#header-bottom-right form.logout a {
+  vertical-align: middle !important;
+  display: inline-block !important;
+  line-height: normal !important;
+  font-size: 0px !important;
+  padding: 0px !important;
+  height: 40px !important;
+  width: 40px !important;
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: -40px 0px !important;
-  font-size: 0px;
-  display: block;
-  height: 40px;
-  width: 40px;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  margin: 0px;
+  top: 0px;
 }
-html body #header #header-bottom-right form.logout a:hover {
+#header-bottom-right form.logout a:hover {
   background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -419,26 +708,408 @@ html body #header #header-bottom-right form.logout a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body .side {
+.side .md,
+.commentarea .md,
+.infobar .md {
+  padding: 0px 10px 10px 10px;
+  background-color: #ffffff;
+  border-radius: 0px;
+  position: relative;
+  border: none;
+}
+.side .md h1,
+.commentarea .md h1,
+.infobar .md h1 {
+  border-bottom: solid 2px #e6e5df !important;
+  margin: 10px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 5px 0px !important;
+  font-size: 30px !important;
+}
+.side .md h2,
+.commentarea .md h2,
+.infobar .md h2 {
+  border-bottom: solid 1px #e6e5df !important;
+  margin: 10px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 24px !important;
+}
+.side .md h3,
+.commentarea .md h3,
+.infobar .md h3 {
+  border-bottom: solid 1px #e6e5df !important;
+  margin: 10px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 18px !important;
+}
+.side .md h4,
+.commentarea .md h4,
+.infobar .md h4 {
+  margin: 10px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 18px !important;
+}
+.side .md h5,
+.commentarea .md h5,
+.infobar .md h5 {
+  margin: 10px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: bold !important;
+  padding: 3px 0px !important;
+  font-size: 14px !important;
+}
+.side .md h6,
+.commentarea .md h6,
+.infobar .md h6 {
+  margin: 10px 0px 0px 0px !important;
+  color: #2f2f2f !important;
+  font-weight: normal !important;
+  padding: 3px 0px !important;
+  font-size: 14px !important;
+}
+.side .md img,
+.commentarea .md img,
+.infobar .md img {
+  border: solid 1px #e6e5df !important;
+  max-width: 100%;
+}
+.side .md p,
+.commentarea .md p,
+.infobar .md p {
+  margin: 10px 0px 0px 0px !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+}
+.side .md a,
+.commentarea .md a,
+.infobar .md a {
+  display: inline-block;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: relative;
+  color: #7b9af4;
+  padding: 2px 2px;
+  z-index: 1;
+}
+.side .md a:visited,
+.commentarea .md a:visited,
+.infobar .md a:visited {
+  color: #7b9af4;
+}
+.side .md a:visited:hover,
+.commentarea .md a:visited:hover,
+.infobar .md a:visited:hover {
+  color: #ffffff;
+}
+.side .md a:visited:hover:before,
+.commentarea .md a:visited:hover:before,
+.infobar .md a:visited:hover:before {
+  background-color: #c4c2b4;
+}
+.side .md a:visited:before,
+.commentarea .md a:visited:before,
+.infobar .md a:visited:before {
+  background-color: #dbd9d1;
+}
+.side .md a:hover,
+.commentarea .md a:hover,
+.infobar .md a:hover {
+  color: #ffffff;
+}
+.side .md a:hover code,
+.commentarea .md a:hover code,
+.infobar .md a:hover code {
+  background-color: transparent !important;
+}
+.side .md a:hover:before,
+.commentarea .md a:hover:before,
+.infobar .md a:hover:before {
+  background-color: #7b9af4;
+  height: 100%;
+}
+.side .md a:before,
+.commentarea .md a:before,
+.infobar .md a:before {
+  background-color: #7b9af4;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  position: absolute;
+  content: '';
+  z-index: -1;
+  height: 2px;
+  bottom: 0px;
+  width: 100%;
+  left: 0px;
+}
+.side .md ul,
+.commentarea .md ul,
+.infobar .md ul {
+  margin: 15px 0px 0px 0px !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+  list-style: none;
+  display: block;
+}
+.side .md ul li,
+.commentarea .md ul li,
+.infobar .md ul li {
+  background-color: #f8f8f5;
+  margin: 5px 0px 0px 0px;
+  padding: 5px;
+}
+.side .md ul li ul,
+.commentarea .md ul li ul,
+.infobar .md ul li ul,
+.side .md ul li ol,
+.commentarea .md ul li ol,
+.infobar .md ul li ol {
+  margin: 0px 0px 0px 0px !important;
+}
+.side .md ul li > ul li,
+.commentarea .md ul li > ul li,
+.infobar .md ul li > ul li,
+.side .md ul li > ol li,
+.commentarea .md ul li > ol li,
+.infobar .md ul li > ol li {
+  background-color: #ffffff;
+}
+.side .md ul li > ul li:before,
+.commentarea .md ul li > ul li:before,
+.infobar .md ul li > ul li:before,
+.side .md ul li > ol li:before,
+.commentarea .md ul li > ol li:before,
+.infobar .md ul li > ol li:before {
+  background-color: #ffffff;
+}
+.side .md ul li > ul li > ul li,
+.commentarea .md ul li > ul li > ul li,
+.infobar .md ul li > ul li > ul li,
+.side .md ul li > ol li > ul li,
+.commentarea .md ul li > ol li > ul li,
+.infobar .md ul li > ol li > ul li,
+.side .md ul li > ul li > ol li,
+.commentarea .md ul li > ul li > ol li,
+.infobar .md ul li > ul li > ol li,
+.side .md ul li > ol li > ol li,
+.commentarea .md ul li > ol li > ol li,
+.infobar .md ul li > ol li > ol li {
+  background-color: #f8f8f5;
+}
+.side .md ul li > ul li > ul li:before,
+.commentarea .md ul li > ul li > ul li:before,
+.infobar .md ul li > ul li > ul li:before,
+.side .md ul li > ol li > ul li:before,
+.commentarea .md ul li > ol li > ul li:before,
+.infobar .md ul li > ol li > ul li:before,
+.side .md ul li > ul li > ol li:before,
+.commentarea .md ul li > ul li > ol li:before,
+.infobar .md ul li > ul li > ol li:before,
+.side .md ul li > ol li > ol li:before,
+.commentarea .md ul li > ol li > ol li:before,
+.infobar .md ul li > ol li > ol li:before {
+  background-color: #f8f8f5;
+}
+.side .md ol,
+.commentarea .md ol,
+.infobar .md ol {
+  list-style-position: inside !important;
+  margin: 15px 0px 0px 0px !important;
+  list-style-type: decimal !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+  display: block;
+}
+.side .md ol li,
+.commentarea .md ol li,
+.infobar .md ol li {
+  background-color: #f8f8f5;
+  margin: 5px 0px 0px 0px;
+  padding: 5px;
+}
+.side .md ol li ul,
+.commentarea .md ol li ul,
+.infobar .md ol li ul,
+.side .md ol li ol,
+.commentarea .md ol li ol,
+.infobar .md ol li ol {
+  margin: 0px 0px 0px 0px !important;
+}
+.side .md ol li > ul li,
+.commentarea .md ol li > ul li,
+.infobar .md ol li > ul li,
+.side .md ol li > ol li,
+.commentarea .md ol li > ol li,
+.infobar .md ol li > ol li {
+  background-color: #ffffff;
+}
+.side .md ol li > ul li:before,
+.commentarea .md ol li > ul li:before,
+.infobar .md ol li > ul li:before,
+.side .md ol li > ol li:before,
+.commentarea .md ol li > ol li:before,
+.infobar .md ol li > ol li:before {
+  background-color: #ffffff;
+}
+.side .md ol li > ul li > ul li,
+.commentarea .md ol li > ul li > ul li,
+.infobar .md ol li > ul li > ul li,
+.side .md ol li > ol li > ul li,
+.commentarea .md ol li > ol li > ul li,
+.infobar .md ol li > ol li > ul li,
+.side .md ol li > ul li > ol li,
+.commentarea .md ol li > ul li > ol li,
+.infobar .md ol li > ul li > ol li,
+.side .md ol li > ol li > ol li,
+.commentarea .md ol li > ol li > ol li,
+.infobar .md ol li > ol li > ol li {
+  background-color: #f8f8f5;
+}
+.side .md ol li > ul li > ul li:before,
+.commentarea .md ol li > ul li > ul li:before,
+.infobar .md ol li > ul li > ul li:before,
+.side .md ol li > ol li > ul li:before,
+.commentarea .md ol li > ol li > ul li:before,
+.infobar .md ol li > ol li > ul li:before,
+.side .md ol li > ul li > ol li:before,
+.commentarea .md ol li > ul li > ol li:before,
+.infobar .md ol li > ul li > ol li:before,
+.side .md ol li > ol li > ol li:before,
+.commentarea .md ol li > ol li > ol li:before,
+.infobar .md ol li > ol li > ol li:before {
+  background-color: #f8f8f5;
+}
+.side .md code,
+.commentarea .md code,
+.infobar .md code {
+  background-color: #f2f1ec !important;
+  display: inline-block !important;
+  padding: 2px 4px !important;
+  -webkit-transition: all 0.3s linear;
+  -khtml-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.side .md blockquote,
+.commentarea .md blockquote,
+.infobar .md blockquote {
+  border-left: solid 5px #e6e5df !important;
+  background-color: #f2f1ec !important;
+  padding: 5px 10px 5px 10px !important;
+  margin: 10px 0px 0px 0px !important;
+}
+.side .md blockquote p,
+.commentarea .md blockquote p,
+.infobar .md blockquote p {
+  margin: 5px 0px 5px 0px !important;
+}
+.side .md blockquote blockquote,
+.commentarea .md blockquote blockquote,
+.infobar .md blockquote blockquote {
+  margin: 5px 0px 5px 0px !important;
+}
+.side .md pre,
+.commentarea .md pre,
+.infobar .md pre {
+  background-image: url(%%aeolus-md-pre%%);
+  background-color: #f2f1ec;
+  padding: 18px 10px 18px 52px;
+  margin: 10px 0px 0px 0px;
+  position: relative;
+  line-height: 18px;
+  font-size: 12px;
+  display: block;
+  width: auto;
+}
+.side .md pre:before,
+.commentarea .md pre:before,
+.infobar .md pre:before {
+  content: '#  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126  127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193  194  195  196  197  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  225  226  227  228  229  230  231  232  233  234  235  236  237  238  239  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  256  257  258  259  260  261  262  263  264  265  266  267  268  269  270  271  272  273  274  275  276  277  278  279  280  281  282  283  284  285  286  287  288  289  290  291  292  293  294  295  296  297  298  299  300  301  302  303  304  305  306  307  308  309  310  311  312  313  314  315  316  317  318  319  320  321  322  323  324  325  326  327  328  329  330  331  332  333  334  335  336  337  338  339  340  341  342  343  344  345  346  347  348  349  350  351  352  353  354  355  356  357  358  359  360  361  362  363  364  365  366  367  368  369  370  371  372  373  374  375  376  377  378  379  380  381  382  383  384  385  386  387  388  389  390  391  392  393  394  395  396  397  398  399  400  401  402  403  404  405  406  407  408  409  410  411  412  413  414  415  416  417  418  419  420  421  422  423  424  425  426  427  428  429  430  431  432  433  434  435  436  437  438  439  440  441  442  443  444  445  446  447  448  449  450  451  452  453  454  455  456  457  458  459  460  461  462  463  464  465  466  467  468  469  470  471  472  473  474  475  476  477  478  479  480  481  482  483  484  485  486  487  488  489  490  491  492  493  494  495  496  497  498  499  500  ';
+  border-right: solid 2px #c1c1c1;
+  background-color: #f2f1ec;
+  padding: 0px 10px 0px 5px;
+  white-space: pre-wrap;
+  position: absolute;
+  line-height: 18px;
+  text-align: right;
+  overflow: hidden;
+  font-size: 12px;
+  height: 100%;
+  width: 25px;
+  left: 0px;
+  top: 0px;
+}
+.side .md pre:after,
+.commentarea .md pre:after,
+.infobar .md pre:after {
+  background-color: #f2f1ec;
+  position: absolute;
+  height: 18px;
+  content: '';
+  bottom: 0px;
+  width: 40px;
+  z-index: 1;
+  left: 0px;
+}
+.side .md pre code,
+.commentarea .md pre code,
+.infobar .md pre code {
+  background-color: transparent !important;
+  display: block !important;
+  padding: 0px !important;
+}
+.side .md table,
+.commentarea .md table,
+.infobar .md table {
+  border-color: #f2f1ec !important;
+  margin: 15px 0px 0px 0px !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+}
+.side .md table thead,
+.commentarea .md table thead,
+.infobar .md table thead {
+  background-color: #f2f1ec !important;
+}
+.side .md table thead th,
+.commentarea .md table thead th,
+.infobar .md table thead th {
+  font-weight: normal;
+  padding: 2px 4px;
+}
+.side {
   background-color: transparent;
   padding: 0px 0px 0px 20px;
   width: 300px;
   margin: 0px;
 }
-html body .side .spacer {
+.side .spacer {
   padding: 0px 0px 10px 0px;
   margin: 0px 0px 0px 0px;
 }
-html body .side .spacer:nth-child(1) {
+.side .spacer:nth-child(1) {
   padding: 0px;
 }
-html body .side .spacer:nth-child(2) {
+.side .spacer:nth-child(2) {
   padding: 0px;
 }
-html body .side .spacer:nth-child(3) {
+.side .spacer:nth-child(3) {
   padding: 8px 0px 10px 0px;
 }
-html body .side .spacer #search input[type^="text"] {
+.side .spacer #search input[type^="text"] {
   -webkit-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
   -moz-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
   box-shadow: inset #f2f1ec 0px 0px 0px 0px;
@@ -457,35 +1128,36 @@ html body .side .spacer #search input[type^="text"] {
   height: 34px;
   margin: 0px;
 }
-html body .side .spacer #search input[type^="text"]:focus {
+.side .spacer #search input[type^="text"]:focus {
   -webkit-box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   -moz-box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   outline: none;
 }
-html body .side .spacer #search #searchexpando {
+.side .spacer #search #searchexpando {
   background-color: #f2f1ec;
   border-radius: 0px;
   padding: 10px;
   border: none;
   margin: 0px;
 }
-html body .side .spacer .login-form-side {
+.side .spacer .login-form-side {
   border: solid 2px #f2f1ec;
   border-top: none;
 }
-html body .side .spacer .linkinfo {
+.side .spacer .linkinfo {
   border: solid 2px #f2f1ec;
   background-color: transparent;
   margin: 10px 0px -8px 0px;
+  color: #3e3e3e;
   border-radius: 0px;
   font-family: Verdana, Arial, Sans-Serif;
 }
-html body .side .spacer .sponsorshipbox {
+.side .spacer .sponsorshipbox {
   padding: 0px 0px 0px 0px;
 }
-html body .side .spacer .sidebox.submit-link .morelink a:before {
-  background-image: url(%%aeolus-post-sprite%%) !important;
+.side .spacer .sidebox.submit-link .morelink a:before {
+  background-image: url('%%aeolus-post-sprite%%') !important;
   background-size: 60px 60px !important;
   background-repeat: no-repeat !important;
   background-position: 0px -30px !important;
@@ -496,8 +1168,8 @@ html body .side .spacer .sidebox.submit-link .morelink a:before {
   left: 0px;
   top: 0px;
 }
-html body .side .spacer .sidebox.submit-text .morelink a:before {
-  background-image: url(%%aeolus-post-sprite%%) !important;
+.side .spacer .sidebox.submit-text .morelink a:before {
+  background-image: url('%%aeolus-post-sprite%%') !important;
   background-size: 60px 60px !important;
   background-repeat: no-repeat !important;
   background-position: -30px 0px !important;
@@ -508,24 +1180,16 @@ html body .side .spacer .sidebox.submit-text .morelink a:before {
   left: 0px;
   top: 0px;
 }
-html body .side .spacer .sidebox .morelink {
+.side .spacer .sidebox .morelink {
   background-color: transparent;
   background-image: none;
   border: none;
   height: 34px;
 }
-html body .side .spacer .sidebox .morelink a {
-  -webkit-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
-  -moz-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
-  box-shadow: inset #f2f1ec 0px 0px 0px 0px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -khtml-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+.side .spacer .sidebox .morelink a {
   background-color: transparent;
   border: solid 2px #f2f1ec;
-  padding: 0px 0px 0px 30px;
+  padding: 0px 10px 0px 10px;
   background-image: none;
   color: #3e3e3e;
   font-weight: normal;
@@ -536,42 +1200,51 @@ html body .side .spacer .sidebox .morelink a {
   text-align: left;
   font-size: 14px;
   height: 30px;
-  width: 266px;
+  -webkit-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
+  -moz-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
+  box-shadow: inset #f2f1ec 0px 0px 0px 0px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -khtml-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  padding: 0px 10px 0px 30px;
+  width: 256px;
 }
-html body .side .spacer .sidebox .morelink a:hover {
+.side .spacer .sidebox .morelink a:hover {
   -webkit-box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   -moz-box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   box-shadow: inset #f2f1ec 0px -30px 0px 0px;
 }
-html body .side .spacer .sidebox .morelink .nub {
+.side .spacer .sidebox .morelink .nub {
   display: none;
 }
-html body .side .spacer .sidebox.create .spacer {
+.side .spacer .sidebox.create .spacer {
   background-color: #f2f1ec;
   padding: 5px 5px 5px 50px;
 }
-html body .side .spacer .sidebox.create .spacer a {
+.side .spacer .sidebox.create .spacer a {
   left: 5px;
   top: 5px;
 }
-html body .side .spacer .sidebox.create .spacer .subtitle {
+.side .spacer .sidebox.create .spacer .subtitle {
   font-size: 0px !important;
 }
-html body .side .spacer .sidebox.create .spacer .subtitle:before {
+.side .spacer .sidebox.create .spacer .subtitle:before {
   content: '...for Timbo_KZ.';
   font-size: 12px !important;
 }
-html body .side .spacer .sidebox.create .spacer .subtitle:nth-child(odd):before {
+.side .spacer .sidebox.create .spacer .subtitle:nth-child(odd):before {
   content: '...for Aeolus.';
 }
-html body .side .spacer .titlebox .redditname {
+.side .spacer .titlebox .redditname {
   padding: 0px 0px 10px 43px;
   font-weight: normal;
   text-align: left;
   display: block;
   margin: 0px;
 }
-html body .side .spacer .titlebox .redditname .hover {
+.side .spacer .titlebox .redditname .hover {
   -webkit-transition: all 0.3s ease;
   -khtml-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -588,12 +1261,12 @@ html body .side .spacer .titlebox .redditname .hover {
   font-size: 20px;
   margin: 0px;
 }
-html body .side .spacer .titlebox .redditname .hover:hover {
+.side .spacer .titlebox .redditname .hover:hover {
   background-color: #7b9af4;
   text-decoration: none;
   color: #f2f1ec;
 }
-html body .side .spacer .titlebox .subscribe-button {
+.side .spacer .titlebox .subscribe-button {
   background-color: transparent;
   margin: -43px 0px 0px 0px;
   font-weight: normal;
@@ -603,7 +1276,7 @@ html body .side .spacer .titlebox .subscribe-button {
   height: 33px;
   width: 33px;
 }
-html body .side .spacer .titlebox .subscribe-button .option {
+.side .spacer .titlebox .subscribe-button .option {
   -webkit-transition: all 0.3s ease;
   -khtml-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -621,20 +1294,20 @@ html body .side .spacer .titlebox .subscribe-button .option {
   height: 33px;
   width: 33px;
 }
-html body .side .spacer .titlebox .subscribe-button .option:hover:before {
+.side .spacer .titlebox .subscribe-button .option:hover:before {
   background-color: #7b9af4;
   color: #f2f1ec;
 }
-html body .side .spacer .titlebox .subscribe-button .option.remove:hover:before {
+.side .spacer .titlebox .subscribe-button .option.remove:hover:before {
   background-color: #f2f1ec;
   color: #3e3e3e;
 }
-html body .side .spacer .titlebox .subscribe-button .option.remove:before {
+.side .spacer .titlebox .subscribe-button .option.remove:before {
   background-color: #7b9af4;
   color: #f2f1ec;
   content: '-';
 }
-html body .side .spacer .titlebox .subscribe-button .option:before {
+.side .spacer .titlebox .subscribe-button .option:before {
   background-color: #f2f1ec;
   border-radius: 33px;
   text-align: center;
@@ -647,13 +1320,13 @@ html body .side .spacer .titlebox .subscribe-button .option:before {
   top: -12px;
   left: 0px;
 }
-html body .side .spacer .titlebox .subButtons {
+.side .spacer .titlebox .subButtons {
   padding: 0px 0px 10px 0px;
   display: block;
   margin: 0px;
 }
-html body .side .spacer .titlebox .subButtons .RESshortcut,
-html body .side .spacer .titlebox .subButtons .REStoggle {
+.side .spacer .titlebox .subButtons .RESshortcut,
+.side .spacer .titlebox .subButtons .REStoggle {
   background-color: #f2f1ec;
   margin: 0px 10px 0px 0px;
   background-image: none;
@@ -670,8 +1343,8 @@ html body .side .spacer .titlebox .subButtons .REStoggle {
   border: none;
   width: auto;
 }
-html body .side .spacer .titlebox .subButtons .RESshortcut:hover,
-html body .side .spacer .titlebox .subButtons .REStoggle:hover {
+.side .spacer .titlebox .subButtons .RESshortcut:hover,
+.side .spacer .titlebox .subButtons .REStoggle:hover {
   background-color: #7b9af4 !important;
   background-image: none;
   -webkit-transition: all 0.1s linear;
@@ -681,330 +1354,81 @@ html body .side .spacer .titlebox .subButtons .REStoggle:hover {
   transition: all 0.1s linear;
   color: #f2f1ec;
 }
-html body .side .spacer .titlebox .subButtons .RESshortcut.remove,
-html body .side .spacer .titlebox .subButtons .REStoggle.remove {
+.side .spacer .titlebox .subButtons .RESshortcut.remove,
+.side .spacer .titlebox .subButtons .REStoggle.remove {
   background-color: #7b9af4 !important;
   color: #f2f1ec;
 }
-html body .side .spacer .titlebox .subButtons .RESshortcut.remove:hover,
-html body .side .spacer .titlebox .subButtons .REStoggle.remove:hover {
+.side .spacer .titlebox .subButtons .RESshortcut.remove:hover,
+.side .spacer .titlebox .subButtons .REStoggle.remove:hover {
   background-color: #f2f1ec;
   color: #3e3e3e;
 }
-html body .side .spacer .titlebox .subscribers {
+.side .spacer .titlebox .subscribers {
   display: inline-block;
   color: #3e3e3e;
   font-family: Verdana, Arial, Sans-Serif;
   height: 20px;
 }
-html body .side .spacer .titlebox .users-online {
+.side .spacer .titlebox .users-online {
   padding: 0px 0px 0px 20px;
   display: inline-block;
   color: #3e3e3e;
   font-family: Verdana, Arial, Sans-Serif;
   height: 20px;
 }
-html body .side .spacer .titlebox .leavemoderator {
+.side .spacer .titlebox .leavemoderator {
   background-color: #f2f1ec;
   padding: 5px 5px 10px 5px;
   margin: 0px 0px 10px 0px;
 }
-html body .side .spacer .titlebox .flairtoggle {
+.side .spacer .titlebox .flairtoggle {
   background-color: #f2f1ec;
   padding: 5px 5px 10px 5px;
 }
-html body .side .spacer .titlebox .tagline {
+.side .spacer .titlebox .tagline {
   background-color: #f2f1ec;
   padding: 5px 10px 10px 10px;
   margin: 0px 0px 10px 0px;
 }
-html body .side .spacer .titlebox .usertext {
+.side .spacer .titlebox .usertext {
   padding: 0px;
 }
-html body .side .spacer .titlebox .usertext .md {
-  padding: 0px 10px 10px 10px;
-  background-color: #ffffff;
-  border-radius: 0px;
-  position: relative;
-  border: none;
-}
-html body .side .spacer .titlebox .usertext .md h1 {
-  border-bottom: solid 2px #e6e5df !important;
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 5px 0px !important;
-  font-size: 30px !important;
-}
-html body .side .spacer .titlebox .usertext .md h2 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 24px !important;
-}
-html body .side .spacer .titlebox .usertext .md h3 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
+.side .spacer .titlebox .usertext .md h1 {
   font-size: 18px !important;
 }
-html body .side .spacer .titlebox .usertext .md h4 {
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 18px !important;
-}
-html body .side .spacer .titlebox .usertext .md h5 {
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
+.side .spacer .titlebox .usertext .md h2 {
   font-weight: bold !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
 }
-html body .side .spacer .titlebox .usertext .md h6 {
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body .side .spacer .titlebox .usertext .md img {
-  border: solid 1px #e6e5df !important;
-  max-width: 100%;
-}
-html body .side .spacer .titlebox .usertext .md p {
-  margin: 10px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body .side .spacer .titlebox .usertext .md a {
-  display: inline-block;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: relative;
-  color: #7b9af4;
-  padding: 2px 2px;
-  z-index: 1;
-}
-html body .side .spacer .titlebox .usertext .md a:visited {
-  color: #7b9af4;
-}
-html body .side .spacer .titlebox .usertext .md a:visited:hover {
-  color: #ffffff;
-}
-html body .side .spacer .titlebox .usertext .md a:visited:hover:before {
-  background-color: #c4c2b4;
-}
-html body .side .spacer .titlebox .usertext .md a:visited:before {
-  background-color: #dbd9d1;
-}
-html body .side .spacer .titlebox .usertext .md a:hover {
-  color: #ffffff;
-}
-html body .side .spacer .titlebox .usertext .md a:hover code {
-  background-color: transparent !important;
-}
-html body .side .spacer .titlebox .usertext .md a:hover:before {
-  background-color: #7b9af4;
-  height: 100%;
-}
-html body .side .spacer .titlebox .usertext .md a:before {
-  background-color: #7b9af4;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: absolute;
-  content: '';
-  z-index: -1;
-  height: 2px;
-  bottom: 0px;
-  width: 100%;
-  left: 0px;
-}
-html body .side .spacer .titlebox .usertext .md ul {
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  list-style: none;
-  display: block;
-}
-html body .side .spacer .titlebox .usertext .md ul li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body .side .spacer .titlebox .usertext .md ul li ul,
-html body .side .spacer .titlebox .usertext .md ul li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body .side .spacer .titlebox .usertext .md ul li > ul li,
-html body .side .spacer .titlebox .usertext .md ul li > ol li {
-  background-color: #ffffff;
-}
-html body .side .spacer .titlebox .usertext .md ul li > ul li:before,
-html body .side .spacer .titlebox .usertext .md ul li > ol li:before {
-  background-color: #ffffff;
-}
-html body .side .spacer .titlebox .usertext .md ul li > ul li > ul li,
-html body .side .spacer .titlebox .usertext .md ul li > ol li > ul li,
-html body .side .spacer .titlebox .usertext .md ul li > ul li > ol li,
-html body .side .spacer .titlebox .usertext .md ul li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body .side .spacer .titlebox .usertext .md ul li > ul li > ul li:before,
-html body .side .spacer .titlebox .usertext .md ul li > ol li > ul li:before,
-html body .side .spacer .titlebox .usertext .md ul li > ul li > ol li:before,
-html body .side .spacer .titlebox .usertext .md ul li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body .side .spacer .titlebox .usertext .md ol {
-  list-style-position: inside !important;
-  margin: 15px 0px 0px 0px !important;
-  list-style-type: decimal !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  display: block;
-}
-html body .side .spacer .titlebox .usertext .md ol li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body .side .spacer .titlebox .usertext .md ol li ul,
-html body .side .spacer .titlebox .usertext .md ol li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body .side .spacer .titlebox .usertext .md ol li > ul li,
-html body .side .spacer .titlebox .usertext .md ol li > ol li {
-  background-color: #ffffff;
-}
-html body .side .spacer .titlebox .usertext .md ol li > ul li:before,
-html body .side .spacer .titlebox .usertext .md ol li > ol li:before {
-  background-color: #ffffff;
-}
-html body .side .spacer .titlebox .usertext .md ol li > ul li > ul li,
-html body .side .spacer .titlebox .usertext .md ol li > ol li > ul li,
-html body .side .spacer .titlebox .usertext .md ol li > ul li > ol li,
-html body .side .spacer .titlebox .usertext .md ol li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body .side .spacer .titlebox .usertext .md ol li > ul li > ul li:before,
-html body .side .spacer .titlebox .usertext .md ol li > ol li > ul li:before,
-html body .side .spacer .titlebox .usertext .md ol li > ul li > ol li:before,
-html body .side .spacer .titlebox .usertext .md ol li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body .side .spacer .titlebox .usertext .md code {
-  background-color: #f2f1ec !important;
-  display: inline-block !important;
-  padding: 2px 4px !important;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-html body .side .spacer .titlebox .usertext .md blockquote {
-  border-left: solid 5px #e6e5df !important;
-  background-color: #f2f1ec !important;
-  padding: 5px 10px 5px 10px !important;
-  margin: 10px 0px 0px 0px !important;
-}
-html body .side .spacer .titlebox .usertext .md blockquote p {
-  margin: 5px 0px 5px 0px !important;
-}
-html body .side .spacer .titlebox .usertext .md blockquote blockquote {
-  margin: 5px 0px 5px 0px !important;
-}
-html body .side .spacer .titlebox .usertext .md pre {
-  background-image: url(%%aeolus-md-pre%%);
-  background-color: #f2f1ec;
-  padding: 18px 10px 18px 52px;
-  margin: 10px 0px 0px 0px;
-  position: relative;
-  line-height: 18px;
-  font-size: 12px;
-  display: block;
-  width: auto;
-}
-html body .side .spacer .titlebox .usertext .md pre:before {
-  content: '#  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126  127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193  194  195  196  197  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  225  226  227  228  229  230  231  232  233  234  235  236  237  238  239  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  256  257  258  259  260  261  262  263  264  265  266  267  268  269  270  271  272  273  274  275  276  277  278  279  280  281  282  283  284  285  286  287  288  289  290  291  292  293  294  295  296  297  298  299  300  301  302  303  304  305  306  307  308  309  310  311  312  313  314  315  316  317  318  319  320  321  322  323  324  325  326  327  328  329  330  331  332  333  334  335  336  337  338  339  340  341  342  343  344  345  346  347  348  349  350  351  352  353  354  355  356  357  358  359  360  361  362  363  364  365  366  367  368  369  370  371  372  373  374  375  376  377  378  379  380  381  382  383  384  385  386  387  388  389  390  391  392  393  394  395  396  397  398  399  400  401  402  403  404  405  406  407  408  409  410  411  412  413  414  415  416  417  418  419  420  421  422  423  424  425  426  427  428  429  430  431  432  433  434  435  436  437  438  439  440  441  442  443  444  445  446  447  448  449  450  451  452  453  454  455  456  457  458  459  460  461  462  463  464  465  466  467  468  469  470  471  472  473  474  475  476  477  478  479  480  481  482  483  484  485  486  487  488  489  490  491  492  493  494  495  496  497  498  499  500  ';
-  border-right: solid 2px #c1c1c1;
-  background-color: #f2f1ec;
-  padding: 0px 10px 0px 5px;
-  white-space: pre-wrap;
-  position: absolute;
-  line-height: 18px;
-  text-align: right;
-  overflow: hidden;
-  font-size: 12px;
-  height: 100%;
-  width: 25px;
-  left: 0px;
-  top: 0px;
-}
-html body .side .spacer .titlebox .usertext .md pre:after {
-  background-color: #f2f1ec;
-  position: absolute;
-  height: 18px;
-  content: '';
-  bottom: 0px;
-  width: 40px;
-  z-index: 1;
-  left: 0px;
-}
-html body .side .spacer .titlebox .usertext .md pre code {
-  background-color: transparent !important;
-  display: block !important;
-  padding: 0px !important;
-}
-html body .side .spacer .titlebox .usertext .md table {
-  border-color: #f2f1ec !important;
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body .side .spacer .titlebox .usertext .md table thead {
-  background-color: #f2f1ec !important;
-}
-html body .side .spacer .titlebox .usertext .md table thead th {
-  font-weight: normal;
-  padding: 2px 4px;
-}
-html body .side .spacer .titlebox .usertext .md h1 {
-  font-size: 18px !important;
-}
-html body .side .spacer .titlebox .usertext .md h2 {
-  font-weight: bold !important;
+.side .spacer .titlebox .usertext .md h2,
+.side .spacer .titlebox .usertext .md h3,
+.side .spacer .titlebox .usertext .md h4 {
   font-size: 16px !important;
 }
-html body .side .spacer .titlebox .usertext .md h3 {
-  font-size: 16px !important;
-}
-html body .side .spacer .titlebox .usertext .md h4 {
-  font-size: 16px !important;
-}
-html body .side .spacer .titlebox .bottom {
+.side .spacer .titlebox .bottom {
   color: #3e3e3e;
   border: none;
 }
-html body .side .spacer .sidecontentbox {
+.side .spacer .sidecontentbox {
   position: relative;
   padding: 0px;
   border: none;
   margin: 0px;
 }
-html body .side .spacer .sidecontentbox.collapsible .title {
+.side .spacer .sidecontentbox.collapsible .title {
+  background-color: transparent;
+  border: solid 2px #f2f1ec;
+  padding: 0px 10px 0px 10px;
+  background-image: none;
+  color: #3e3e3e;
+  font-weight: normal;
+  font-family: Verdana, Arial, Sans-Serif;
+  position: relative;
+  line-height: 30px;
+  overflow: default;
+  text-align: left;
+  font-size: 14px;
+  height: 30px;
   -webkit-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
   -moz-box-shadow: inset #f2f1ec 0px 0px 0px 0px;
   box-shadow: inset #f2f1ec 0px 0px 0px 0px;
@@ -1013,38 +1437,38 @@ html body .side .spacer .sidecontentbox.collapsible .title {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  padding: 0px 0px 0px 30px;
-  width: 266px;
+  padding: 0px 10px 0px 30px;
+  width: 256px;
 }
-html body .side .spacer .sidecontentbox.collapsible .title:hover {
+.side .spacer .sidecontentbox.collapsible .title:hover {
   -webkit-box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   -moz-box-shadow: inset #f2f1ec 0px -30px 0px 0px;
   box-shadow: inset #f2f1ec 0px -30px 0px 0px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content {
+.side .spacer .sidecontentbox:not(.collapsible) .content {
   border-bottom: solid 2px #f2f1ec;
   background-color: #f2f1ec;
   padding: 5px 0px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li {
+.side .spacer .sidecontentbox:not(.collapsible) .content li {
   padding: 5px 10px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li > a[href*="[object Object]"] {
+.side .spacer .sidecontentbox:not(.collapsible) .content li > a[href*="[object Object]"] {
   display: none;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing {
   background-color: #f8f8f5;
   padding: 5px 5px 0px 5px;
   margin: 0px 0px 10px 0px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol {
   padding: 10px 0px;
   margin: 0px;
   width: 40px;
   padding: 3px 0px 0px 0px;
   width: 25px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .score {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .score {
   color: #dddcd4;
   font-weight: normal;
   font-family: Verdana, Arial, Sans-Serif;
@@ -1053,13 +1477,13 @@ html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .t
   height: 20px;
   width: 40px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .score.likes {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .score.likes {
   color: #7b9af4;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .score.dislikes {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .score.dislikes {
   color: #d9d7ce;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow {
   border: solid 2px #dddcd4;
   background-image: none !important;
   background-color: transparent;
@@ -1074,37 +1498,37 @@ html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .t
   height: 14px;
   width: 14px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.up {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.up {
   -webkit-box-shadow: inset #7b9af4 0px 0px 0px 0px;
   -moz-box-shadow: inset #7b9af4 0px 0px 0px 0px;
   box-shadow: inset #7b9af4 0px 0px 0px 0px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.upmod {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.upmod {
   -webkit-box-shadow: inset #7b9af4 0px -14px 0px 0px;
   -moz-box-shadow: inset #7b9af4 0px -14px 0px 0px;
   box-shadow: inset #7b9af4 0px -14px 0px 0px;
   background-color: #7b9af4;
   border: solid 2px #7b9af4;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.down {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.down {
   -webkit-box-shadow: inset #d9d7ce 0px 0px 0px 0px;
   -moz-box-shadow: inset #d9d7ce 0px 0px 0px 0px;
   box-shadow: inset #d9d7ce 0px 0px 0px 0px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.downmod {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow.downmod {
   -webkit-box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   -moz-box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   background-color: #d9d7ce;
   border: solid 2px #d9d7ce;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow {
   margin: 0px 0px 0px 0px;
 }
-html body .side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow:first-child {
+.side .spacer .sidecontentbox:not(.collapsible) .content li .gadget .thing .midcol .arrow:first-child {
   margin: 0px 0px 5px 0px;
 }
-html body .side .spacer .sidecontentbox .helplink {
+.side .spacer .sidecontentbox .helplink {
   margin: 0px 0px 0px 0px;
   position: absolute;
   line-height: 20px;
@@ -1114,13 +1538,11 @@ html body .side .spacer .sidecontentbox .helplink {
   z-index: 1;
   top: 5px;
 }
-html body .side .spacer .sidecontentbox .title {
+.side .spacer .sidecontentbox .title {
   background-color: transparent;
   border: solid 2px #f2f1ec;
-  text-transform: lowercase;
-  padding: 0px 0px 0px 10px;
+  padding: 0px 10px 0px 10px;
   background-image: none;
-  font-variant: normal;
   color: #3e3e3e;
   font-weight: normal;
   font-family: Verdana, Arial, Sans-Serif;
@@ -1128,17 +1550,17 @@ html body .side .spacer .sidecontentbox .title {
   line-height: 30px;
   overflow: default;
   text-align: left;
+  font-size: 14px;
   height: 30px;
-  width: 286px;
 }
-html body .side .spacer .sidecontentbox .title h1 {
+.side .spacer .sidecontentbox .title h1 {
   text-transform: capitalize;
   font-size: 12px !important;
   font-variant: normal;
   color: #3e3e3e;
   font-family: Verdana, Arial, Sans-Serif;
 }
-html body .side .spacer .sidecontentbox .title .collapse-button {
+.side .spacer .sidecontentbox .title .collapse-button {
   background-color: transparent;
   font-size: 14px !important;
   text-align: center;
@@ -1153,15 +1575,15 @@ html body .side .spacer .sidecontentbox .title .collapse-button {
   left: 0px;
   top: 0px;
 }
-html body .side .spacer .sidecontentbox .content {
+.side .spacer .sidecontentbox .content {
   padding: 0px;
   border: none;
   margin: 0px;
 }
-html body .side .spacer .sidecontentbox .content li ul.icon-menu {
+.side .spacer .sidecontentbox .content .icon-menu {
   display: block;
 }
-html body .side .spacer .sidecontentbox .content li ul.icon-menu li {
+.side .spacer .sidecontentbox .content .icon-menu li {
   background-color: transparent;
   display: block;
   padding: 0px;
@@ -1169,10 +1591,10 @@ html body .side .spacer .sidecontentbox .content li ul.icon-menu li {
   height: auto;
   margin: 0px;
 }
-html body .side .spacer .sidecontentbox .content li ul.icon-menu li:last-child {
+.side .spacer .sidecontentbox .content .icon-menu li:last-child {
   border-bottom: solid 2px #f2f1ec;
 }
-html body .side .spacer .sidecontentbox .content li ul.icon-menu li a {
+.side .spacer .sidecontentbox .content .icon-menu li a {
   background-color: transparent;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -1184,7 +1606,7 @@ html body .side .spacer .sidecontentbox .content li ul.icon-menu li a {
   display: block;
   padding: 5px;
 }
-html body .side .spacer .sidecontentbox .content li ul.icon-menu li a:hover {
+.side .spacer .sidecontentbox .content .icon-menu li a:hover {
   background-color: #f2f1ec;
   text-decoration: none;
   -webkit-transition: all 0.1s linear;
@@ -1193,65 +1615,30 @@ html body .side .spacer .sidecontentbox .content li ul.icon-menu li a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body > .content {
-  background-color: #f2f1ec;
-  padding: 20px 20px 20px 20px;
-  margin: 0px 320px 0px 0px;
-  position: relative;
-}
-html body > .content:after {
-  content: 'Aeolus CSS v0.0.1.0 (/r/Aeolus)';
-  background-color: #c1c1c1;
-  color: #e6e5df;
-  position: absolute;
-  line-height: 20px;
-  text-align: left;
-  height: 20px;
-  bottom: 0px;
-  width: 100%;
-  clear: both;
-  left: 0px;
-}
-html body > .content > span:first-child {
-  border: solid 2px #e6e5df;
-  margin: 0px 0px 20px 0px;
-  color: #2f2f2f;
-  display: block;
-  padding: 10px;
-}
-html body > .content > span:first-child .wikititle strong {
-  text-transform: capitalize;
-  font-weight: normal;
-  font-family: Verdana, Arial, Sans-Serif;
-}
-html body > .content .wiki-page-content {
+.wiki-page-content {
   margin: 0px 0px 20px 0px;
 }
-html body > .content .wiki-page-content > hr {
+.wiki-page-content > hr {
   display: none;
 }
-html body > .content .wiki-page-content .md {
-  padding: 0px 20px 20px 20px;
-  background-color: #ffffff;
-  border-radius: 0px;
+.wiki-page-content .md {
   position: relative;
-  border: none;
 }
-html body > .content .wiki-page-content .md .toc {
+.wiki-page-content .md .toc {
   position: relative;
   z-index: 99;
 }
-html body > .content .wiki-page-content .md .toc a:hover,
-html body > .content .wiki-page-content .md .toc a:visited:hover {
+.wiki-page-content .md .toc a:hover,
+.wiki-page-content .md .toc a:visited:hover {
   color: #7b9af4;
 }
-html body > .content .wiki-page-content .md .toc a:hover:before,
-html body > .content .wiki-page-content .md .toc a:visited:hover:before {
+.wiki-page-content .md .toc a:hover:before,
+.wiki-page-content .md .toc a:visited:hover:before {
   background-color: #7b9af4;
   height: 2px;
 }
-html body > .content .wiki-page-content .md .toc a:before,
-html body > .content .wiki-page-content .md .toc a:visited:before {
+.wiki-page-content .md .toc a:before,
+.wiki-page-content .md .toc a:visited:before {
   background-color: transparent;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -1266,7 +1653,7 @@ html body > .content .wiki-page-content .md .toc a:visited:before {
   width: 100%;
   left: 0px;
 }
-html body > .content .wiki-page-content .md .toc > ul {
+.wiki-page-content .md .toc > ul {
   -webkit-box-shadow: #ffffff 0px 0px 0px 10px;
   -moz-box-shadow: #ffffff 0px 0px 0px 10px;
   box-shadow: #ffffff 0px 0px 0px 10px;
@@ -1275,284 +1662,26 @@ html body > .content .wiki-page-content .md .toc > ul {
   margin: 20px 0px 20px 20px !important;
   padding: 5px !important;
 }
-html body > .content .wiki-page-content .md .toc > ul ul {
+.wiki-page-content .md .toc > ul ul {
   padding: 0px 0px 0px 10px !important;
 }
-html body > .content .wiki-page-content .md .toc > ul li {
+.wiki-page-content .md .toc > ul li {
   background-color: transparent !important;
   padding: 5px;
 }
-html body > .content .wiki-page-content .md .toc > ul li:before {
+.wiki-page-content .md .toc > ul li:before {
   display: none !important;
 }
-html body > .content .wiki-page-content .md h1 {
-  border-bottom: solid 2px #e6e5df !important;
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 5px 0px !important;
-  font-size: 30px !important;
-}
-html body > .content .wiki-page-content .md h2 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 24px !important;
-}
-html body > .content .wiki-page-content .md h3 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 18px !important;
-}
-html body > .content .wiki-page-content .md h4 {
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 18px !important;
-}
-html body > .content .wiki-page-content .md h5 {
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: bold !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body > .content .wiki-page-content .md h6 {
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body > .content .wiki-page-content .md img {
-  border: solid 1px #e6e5df !important;
-  max-width: 100%;
-}
-html body > .content .wiki-page-content .md p {
-  margin: 20px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body > .content .wiki-page-content .md a {
-  display: inline-block;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: relative;
-  color: #7b9af4;
-  padding: 2px 2px;
-  z-index: 1;
-}
-html body > .content .wiki-page-content .md a:visited {
-  color: #7b9af4;
-}
-html body > .content .wiki-page-content .md a:visited:hover {
-  color: #ffffff;
-}
-html body > .content .wiki-page-content .md a:visited:hover:before {
-  background-color: #c4c2b4;
-}
-html body > .content .wiki-page-content .md a:visited:before {
-  background-color: #dbd9d1;
-}
-html body > .content .wiki-page-content .md a:hover {
-  color: #ffffff;
-}
-html body > .content .wiki-page-content .md a:hover code {
-  background-color: transparent !important;
-}
-html body > .content .wiki-page-content .md a:hover:before {
-  background-color: #7b9af4;
-  height: 100%;
-}
-html body > .content .wiki-page-content .md a:before {
-  background-color: #7b9af4;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: absolute;
-  content: '';
-  z-index: -1;
-  height: 2px;
-  bottom: 0px;
-  width: 100%;
-  left: 0px;
-}
-html body > .content .wiki-page-content .md ul {
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  list-style: none;
-  display: block;
-}
-html body > .content .wiki-page-content .md ul li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body > .content .wiki-page-content .md ul li ul,
-html body > .content .wiki-page-content .md ul li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body > .content .wiki-page-content .md ul li > ul li,
-html body > .content .wiki-page-content .md ul li > ol li {
-  background-color: #ffffff;
-}
-html body > .content .wiki-page-content .md ul li > ul li:before,
-html body > .content .wiki-page-content .md ul li > ol li:before {
-  background-color: #ffffff;
-}
-html body > .content .wiki-page-content .md ul li > ul li > ul li,
-html body > .content .wiki-page-content .md ul li > ol li > ul li,
-html body > .content .wiki-page-content .md ul li > ul li > ol li,
-html body > .content .wiki-page-content .md ul li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body > .content .wiki-page-content .md ul li > ul li > ul li:before,
-html body > .content .wiki-page-content .md ul li > ol li > ul li:before,
-html body > .content .wiki-page-content .md ul li > ul li > ol li:before,
-html body > .content .wiki-page-content .md ul li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body > .content .wiki-page-content .md ol {
-  list-style-position: inside !important;
-  margin: 15px 0px 0px 0px !important;
-  list-style-type: decimal !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  display: block;
-}
-html body > .content .wiki-page-content .md ol li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body > .content .wiki-page-content .md ol li ul,
-html body > .content .wiki-page-content .md ol li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body > .content .wiki-page-content .md ol li > ul li,
-html body > .content .wiki-page-content .md ol li > ol li {
-  background-color: #ffffff;
-}
-html body > .content .wiki-page-content .md ol li > ul li:before,
-html body > .content .wiki-page-content .md ol li > ol li:before {
-  background-color: #ffffff;
-}
-html body > .content .wiki-page-content .md ol li > ul li > ul li,
-html body > .content .wiki-page-content .md ol li > ol li > ul li,
-html body > .content .wiki-page-content .md ol li > ul li > ol li,
-html body > .content .wiki-page-content .md ol li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body > .content .wiki-page-content .md ol li > ul li > ul li:before,
-html body > .content .wiki-page-content .md ol li > ol li > ul li:before,
-html body > .content .wiki-page-content .md ol li > ul li > ol li:before,
-html body > .content .wiki-page-content .md ol li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body > .content .wiki-page-content .md code {
-  background-color: #f2f1ec !important;
-  display: inline-block !important;
-  padding: 2px 4px !important;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-html body > .content .wiki-page-content .md blockquote {
-  border-left: solid 5px #e6e5df !important;
-  background-color: #f2f1ec !important;
-  padding: 5px 10px 5px 10px !important;
-  margin: 20px 0px 0px 0px !important;
-}
-html body > .content .wiki-page-content .md blockquote p {
-  margin: 5px 0px 5px 0px !important;
-}
-html body > .content .wiki-page-content .md blockquote blockquote {
-  margin: 5px 0px 5px 0px !important;
-}
-html body > .content .wiki-page-content .md pre {
-  background-image: url(%%aeolus-md-pre%%);
-  background-color: #f2f1ec;
-  padding: 18px 10px 18px 52px;
-  margin: 20px 0px 0px 0px;
-  position: relative;
-  line-height: 18px;
-  font-size: 12px;
-  display: block;
-  width: auto;
-}
-html body > .content .wiki-page-content .md pre:before {
-  content: '#  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126  127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193  194  195  196  197  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  225  226  227  228  229  230  231  232  233  234  235  236  237  238  239  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  256  257  258  259  260  261  262  263  264  265  266  267  268  269  270  271  272  273  274  275  276  277  278  279  280  281  282  283  284  285  286  287  288  289  290  291  292  293  294  295  296  297  298  299  300  301  302  303  304  305  306  307  308  309  310  311  312  313  314  315  316  317  318  319  320  321  322  323  324  325  326  327  328  329  330  331  332  333  334  335  336  337  338  339  340  341  342  343  344  345  346  347  348  349  350  351  352  353  354  355  356  357  358  359  360  361  362  363  364  365  366  367  368  369  370  371  372  373  374  375  376  377  378  379  380  381  382  383  384  385  386  387  388  389  390  391  392  393  394  395  396  397  398  399  400  401  402  403  404  405  406  407  408  409  410  411  412  413  414  415  416  417  418  419  420  421  422  423  424  425  426  427  428  429  430  431  432  433  434  435  436  437  438  439  440  441  442  443  444  445  446  447  448  449  450  451  452  453  454  455  456  457  458  459  460  461  462  463  464  465  466  467  468  469  470  471  472  473  474  475  476  477  478  479  480  481  482  483  484  485  486  487  488  489  490  491  492  493  494  495  496  497  498  499  500  ';
-  border-right: solid 2px #c1c1c1;
-  background-color: #f2f1ec;
-  padding: 0px 10px 0px 5px;
-  white-space: pre-wrap;
-  position: absolute;
-  line-height: 18px;
-  text-align: right;
-  overflow: hidden;
-  font-size: 12px;
-  height: 100%;
-  width: 25px;
-  left: 0px;
-  top: 0px;
-}
-html body > .content .wiki-page-content .md pre:after {
-  background-color: #f2f1ec;
-  position: absolute;
-  height: 18px;
-  content: '';
-  bottom: 0px;
-  width: 40px;
-  z-index: 1;
-  left: 0px;
-}
-html body > .content .wiki-page-content .md pre code {
-  background-color: transparent !important;
-  display: block !important;
-  padding: 0px !important;
-}
-html body > .content .wiki-page-content .md table {
-  border-color: #f2f1ec !important;
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body > .content .wiki-page-content .md table thead {
-  background-color: #f2f1ec !important;
-}
-html body > .content .wiki-page-content .md table thead th {
-  font-weight: normal;
-  padding: 2px 4px;
-}
-html body > .content > h1 {
-  background-color: #e0e4ed;
-  margin: 0px 0px 20px 0px;
-  padding: 10px;
-}
-html body > .content .submit.content {
+.submit.content {
   padding: 0px 0px 20px 0px;
   margin: 0px;
 }
-html body > .content .submit.content .tabmenu.formtab {
+.submit.content .tabmenu.formtab {
   height: 32px;
   padding: 0px;
   margin: 0px;
 }
-html body > .content .submit.content .tabmenu.formtab li {
+.submit.content .tabmenu.formtab li {
   background-color: transparent;
   vertical-align: center;
   display: inline-block;
@@ -1562,21 +1691,21 @@ html body > .content .submit.content .tabmenu.formtab li {
   border: none;
   margin: 0px;
 }
-html body > .content .submit.content .tabmenu.formtab li:first-child a {
+.submit.content .tabmenu.formtab li:first-child a {
   border-right: none;
 }
-html body > .content .submit.content .tabmenu.formtab li.selected a {
+.submit.content .tabmenu.formtab li.selected a {
   -webkit-box-shadow: inset #ede6bb 0px 32px 0px 0px;
   -moz-box-shadow: inset #ede6bb 0px 32px 0px 0px;
   box-shadow: inset #ede6bb 0px 32px 0px 0px;
   color: #ffffff;
 }
-html body > .content .submit.content .tabmenu.formtab li.selected a:hover {
+.submit.content .tabmenu.formtab li.selected a:hover {
   -webkit-box-shadow: inset #ede6bb 0px 0px 0px 0px;
   -moz-box-shadow: inset #ede6bb 0px 0px 0px 0px;
   box-shadow: inset #ede6bb 0px 0px 0px 0px;
 }
-html body > .content .submit.content .tabmenu.formtab li a {
+.submit.content .tabmenu.formtab li a {
   -webkit-box-shadow: inset #ede6bb 0px 0px 0px 0px;
   -moz-box-shadow: inset #ede6bb 0px 0px 0px 0px;
   box-shadow: inset #ede6bb 0px 0px 0px 0px;
@@ -1598,33 +1727,33 @@ html body > .content .submit.content .tabmenu.formtab li a {
   height: 20px;
   top: 0px;
 }
-html body > .content .submit.content .tabmenu.formtab li a:hover {
+.submit.content .tabmenu.formtab li a:hover {
   -webkit-box-shadow: inset #ede6bb 0px -32px 0px 0px;
   -moz-box-shadow: inset #ede6bb 0px -32px 0px 0px;
   box-shadow: inset #ede6bb 0px -32px 0px 0px;
 }
-html body > .content .submit.content .formtabs-content {
+.submit.content .formtabs-content {
   padding: 0px;
   border: none;
   margin: 0px;
   width: auto;
 }
-html body > .content .submit.content .formtabs-content .spacer {
+.submit.content .formtabs-content .spacer {
   padding: 0px;
   margin: 0px;
 }
-html body > .content .submit.content .formtabs-content .spacer #link-desc,
-html body > .content .submit.content .formtabs-content .spacer #text-desc {
+.submit.content .formtabs-content .spacer #link-desc,
+.submit.content .formtabs-content .spacer #text-desc {
+  padding: 10px !important;
   margin: 0px 0px 20px 0px;
-  padding: 10px;
 }
-html body > .content .submit.content .formtabs-content .spacer .roundfield {
+.submit.content .formtabs-content .spacer .roundfield {
   background-color: #f8f8f5 !important;
   text-align: left !important;
   border-radius: 0px;
   width: auto;
 }
-html body > .content .submit.content .info-notice {
+.submit.content .info-notice {
   background-color: #e0e4ed;
   margin: 20px 0px 0px 0px;
   border-radius: 0px;
@@ -1632,21 +1761,37 @@ html body > .content .submit.content .info-notice {
   border: none;
   width: auto;
 }
-html body > .content .submit.content .spacer {
+.submit.content .spacer {
   padding: 20px 0px 0px 0px;
   margin: 0px;
 }
-html body > .content .stylesheet-customize-container {
+.create-reddit .linefield {
+  background-color: #f8f8f5 !important;
+  margin: 0px 0px 20px 0px !important;
+  width: auto !important;
+}
+.create-reddit .linefield .title {
+  text-transform: capitalize;
+  color: #2f2f2f;
+}
+.create-reddit .save-button {
+  padding: 0px 0px 20px 0px;
+  margin: 0px;
+}
+.create-reddit .save-button button {
+  margin: 0px;
+}
+.stylesheet-customize-container {
   margin: 0px 0px 20px 0px;
 }
-html body > .content .stylesheet-customize-container #subreddit_stylesheet {
+.stylesheet-customize-container #subreddit_stylesheet {
   background-color: #f8f8f5 !important;
   text-align: left !important;
   border-radius: 0px;
   padding: 10px;
   width: auto;
 }
-html body > .content .stylesheet-customize-container #subreddit_stylesheet h2 {
+.stylesheet-customize-container #subreddit_stylesheet h2 {
   text-transform: capitalize;
   color: #2f2f2f;
   line-height: 20px;
@@ -1654,15 +1799,15 @@ html body > .content .stylesheet-customize-container #subreddit_stylesheet h2 {
   height: 20px;
   margin: 0px;
 }
-html body > .content .stylesheet-customize-container #subreddit_stylesheet .sheets {
+.stylesheet-customize-container #subreddit_stylesheet .sheets {
   padding: 20px 0px 0px 0px;
   margin: 0px;
 }
-html body > .content .stylesheet-customize-container #subreddit_stylesheet .sheets .col > div {
+.stylesheet-customize-container #subreddit_stylesheet .sheets .col > div {
   padding: 0px;
   margin: 0px;
 }
-html body > .content .stylesheet-customize-container #images {
+.stylesheet-customize-container #images {
   background-color: #f8f8f5 !important;
   text-align: left !important;
   margin: 20px 0px 0px 0px;
@@ -1670,7 +1815,7 @@ html body > .content .stylesheet-customize-container #images {
   padding: 10px;
   width: auto;
 }
-html body > .content .stylesheet-customize-container #images h2 {
+.stylesheet-customize-container #images h2 {
   text-transform: capitalize;
   color: #2f2f2f;
   line-height: 20px;
@@ -1678,38 +1823,74 @@ html body > .content .stylesheet-customize-container #images h2 {
   height: 20px;
   margin: 0px;
 }
-html body > .content .stylesheet-customize-container #images h2 a {
+.stylesheet-customize-container #images h2 a {
   color: #2f2f2f;
 }
-html body > .content .stylesheet-customize-container #images h2 a:hover {
+.stylesheet-customize-container #images h2 a:hover {
   text-decoration: none;
   color: #2f2f2f;
 }
-html body > .content .stylesheet-customize-container #images #image-preview-list li {
+.stylesheet-customize-container #images #image-preview-list li {
   display: inline-block;
   float: none;
 }
-html body > .content .stylesheet-customize-container #images #image-preview-list li .description {
+.stylesheet-customize-container #images #image-preview-list li .description {
   white-space: pre-wrap;
 }
-html body > .content .stylesheet-customize-container #images #image-preview-list li .description pre {
+.stylesheet-customize-container #images #image-preview-list li .description pre {
   white-space: pre-wrap;
 }
-html body > .content .stylesheet-customize-container #images #image-upload {
+.stylesheet-customize-container #images #image-upload {
   padding: 20px 0px 0px 0px;
   margin: 0px;
 }
-html body > .content .stylesheet-customize-container #images .error {
+.stylesheet-customize-container #images .error {
   background-color: #f4d6d1;
   margin: 20px 0px 0px 0px;
   padding: 10px;
 }
-html body > .content > .menuarea {
+body > .content {
+  background-color: #f2f1ec;
+  padding: 20px 20px 20px 20px;
+  margin: 0px 320px 0px 0px;
+  position: relative;
+}
+body > .content:after {
+  content: 'Aeolus CSS v0.0.1.1 (/r/Aeolus)';
+  background-color: #c1c1c1;
+  color: #e6e5df;
+  position: absolute;
+  line-height: 20px;
+  text-align: left;
+  height: 20px;
+  bottom: 0px;
+  width: 100%;
+  clear: both;
+  left: 0px;
+}
+body > .content > span:first-child {
+  border: solid 2px #e6e5df;
+  margin: 0px 0px 20px 0px;
+  color: #2f2f2f;
+  display: block;
+  padding: 10px;
+}
+body > .content > span:first-child .wikititle strong {
+  text-transform: capitalize;
+  font-weight: normal;
+  font-family: Verdana, Arial, Sans-Serif;
+}
+body > .content > h1 {
+  background-color: #e0e4ed;
+  margin: 0px 0px 20px 0px;
+  padding: 10px;
+}
+body > .content > .menuarea {
   border: solid 2px #e6e5df;
   margin: 0px 0px 20px 0px;
   color: #2f2f2f;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop {
+body > .content > .menuarea .spacer .drop-choices.lightdrop {
   -webkit-transition: opacity 0.3s ease, top 0.3s ease;
   -khtml-transition: opacity 0.3s ease, top 0.3s ease;
   -moz-transition: opacity 0.3s ease, top 0.3s ease;
@@ -1723,7 +1904,7 @@ html body > .content > .menuarea .spacer .drop-choices.lightdrop {
   height: 0px;
   opacity: 0;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop:before {
+body > .content > .menuarea .spacer .drop-choices.lightdrop:before {
   -webkit-transition: background-color 0.3s ease;
   -khtml-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
@@ -1748,7 +1929,7 @@ html body > .content > .menuarea .spacer .drop-choices.lightdrop:before {
   left: 4px;
   top: 4px;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse {
+body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse {
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -1758,7 +1939,7 @@ html body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse {
   height: auto;
   opacity: 1;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse:before {
+body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse:before {
   -webkit-transition: background-color 0.1s ease;
   -khtml-transition: background-color 0.1s ease;
   -moz-transition: background-color 0.1s ease;
@@ -1768,14 +1949,14 @@ html body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse:before {
   height: 20px;
   width: 20px;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse form a {
+body > .content > .menuarea .spacer .drop-choices.lightdrop.inuse form a {
   padding: 4px 15px;
   height: auto;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop form {
+body > .content > .menuarea .spacer .drop-choices.lightdrop form {
   padding: 0px;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop form a {
+body > .content > .menuarea .spacer .drop-choices.lightdrop form a {
   background-color: #fcfcfb;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -1788,7 +1969,7 @@ html body > .content > .menuarea .spacer .drop-choices.lightdrop form a {
   overflow: hidden;
   height: 0px;
 }
-html body > .content > .menuarea .spacer .drop-choices.lightdrop form a:hover {
+body > .content > .menuarea .spacer .drop-choices.lightdrop form a:hover {
   background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -1796,62 +1977,82 @@ html body > .content > .menuarea .spacer .drop-choices.lightdrop form a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body > .content .infobar {
-  background-color: #ede6bb;
-  margin: 0px 0px 20px 0px;
+body > .content #noresults {
+  background-color: #f4d6d1 !important;
+  border-radius: 0px !important;
+  margin: 0px 0px 20px 0px !important;
+  padding: 10px !important;
   border: none !important;
+  width: auto !important;
 }
-html body > .content #siteTable #noresults {
-  background-color: #f4d6d1;
-  margin: 0px 0px 20px 0px;
-  padding: 10px;
-}
-html body > .content #siteTable .nav-buttons,
-html body > .content #siteTable .NERPageMarker {
-  background-color: #ede6bb;
-  margin: 0px 0px 20px 0px;
+body > .content .nav-buttons,
+body > .content .NERPageMarker,
+body > .content .infobar,
+body > .content #progressIndicator {
+  background-color: #ede6bb !important;
+  border-radius: 0px !important;
+  margin: 0px 0px 20px 0px !important;
+  padding: 10px !important;
   border: none !important;
-  padding: 10px;
+  width: auto !important;
 }
-html body > .content #siteTable .thing {
+body > .content .infobar {
+  padding: 0px 10px 10px 10px !important;
+}
+body > .content .infobar .md {
+  background-color: transparent;
+  padding: 0px;
+}
+body > .content #NERFail {
+  background-color: #ede6bb !important;
+  border-radius: 0px !important;
+  margin: 20px 0px 20px 0px !important;
+  padding: 10px !important;
+  border: none !important;
+  width: auto !important;
+}
+body > .content #NERFail h3 {
+  font-weight: normal;
+}
+body > .content #siteTable .thing {
   background-color: #f8f8f5;
   padding: 0px 0px 0px 0px;
   margin: 0px 0px 0px 0px;
   position: relative;
 }
-html body > .content #siteTable .thing.link.last-clicked {
+body > .content #siteTable .thing.link.last-clicked {
   overflow: visible !important;
   border: none;
 }
-html body > .content #siteTable .thing.link.last-clicked .entry {
+body > .content #siteTable .thing.link.last-clicked .entry {
   overflow: visible !important;
 }
-html body > .content #siteTable .thing.self .thumbnail {
-  background-image: url(%%aeolus-post-sprite%%) !important;
+body > .content #siteTable .thing.self .thumbnail {
+  background-image: url('%%aeolus-post-sprite%%') !important;
   background-size: 140px 140px !important;
   background-repeat: no-repeat !important;
   background-position: -70px 0px !important;
 }
-html body > .content #siteTable .thing.stickied {
+body > .content #siteTable .thing.stickied {
   background-color: #e0e4ed;
 }
-html body > .content #siteTable .thing.stickied .thumbnail {
-  background-image: url(%%aeolus-post-sprite%%) !important;
+body > .content #siteTable .thing.stickied .thumbnail {
+  background-image: url('%%aeolus-post-sprite%%') !important;
   background-size: 140px 140px !important;
   background-repeat: no-repeat !important;
   background-position: 0px 0px !important;
 }
-html body > .content #siteTable .thing.stickied .entry > .title .title {
+body > .content #siteTable .thing.stickied .entry > .title .title {
   color: #2f2f2f;
   font-weight: normal;
 }
-html body > .content #siteTable .thing.over18 .thumbnail {
-  background-image: url(%%aeolus-post-sprite%%) !important;
+body > .content #siteTable .thing.over18 .thumbnail {
+  background-image: url('%%aeolus-post-sprite%%') !important;
   background-size: 140px 140px !important;
   background-repeat: no-repeat !important;
   background-position: -70px -70px !important;
 }
-html body > .content #siteTable .thing .rank {
+body > .content #siteTable .thing .rank {
   background-color: #f2f1ec;
   margin: -15px 5px 0px 0px;
   border-radius: 20px;
@@ -1867,12 +2068,12 @@ html body > .content #siteTable .thing .rank {
   width: auto;
   top: 40px;
 }
-html body > .content #siteTable .thing .midcol {
+body > .content #siteTable .thing .midcol {
   padding: 10px 0px;
   margin: 0px;
   width: 40px;
 }
-html body > .content #siteTable .thing .midcol .score {
+body > .content #siteTable .thing .midcol .score {
   color: #dddcd4;
   font-weight: normal;
   font-family: Verdana, Arial, Sans-Serif;
@@ -1881,13 +2082,13 @@ html body > .content #siteTable .thing .midcol .score {
   height: 20px;
   width: 40px;
 }
-html body > .content #siteTable .thing .midcol .score.likes {
+body > .content #siteTable .thing .midcol .score.likes {
   color: #7b9af4;
 }
-html body > .content #siteTable .thing .midcol .score.dislikes {
+body > .content #siteTable .thing .midcol .score.dislikes {
   color: #d9d7ce;
 }
-html body > .content #siteTable .thing .midcol .arrow {
+body > .content #siteTable .thing .midcol .arrow {
   border: solid 2px #dddcd4;
   background-image: none !important;
   background-color: transparent;
@@ -1902,32 +2103,32 @@ html body > .content #siteTable .thing .midcol .arrow {
   height: 14px;
   width: 14px;
 }
-html body > .content #siteTable .thing .midcol .arrow.up {
+body > .content #siteTable .thing .midcol .arrow.up {
   -webkit-box-shadow: inset #7b9af4 0px 0px 0px 0px;
   -moz-box-shadow: inset #7b9af4 0px 0px 0px 0px;
   box-shadow: inset #7b9af4 0px 0px 0px 0px;
 }
-html body > .content #siteTable .thing .midcol .arrow.upmod {
+body > .content #siteTable .thing .midcol .arrow.upmod {
   -webkit-box-shadow: inset #7b9af4 0px -14px 0px 0px;
   -moz-box-shadow: inset #7b9af4 0px -14px 0px 0px;
   box-shadow: inset #7b9af4 0px -14px 0px 0px;
   background-color: #7b9af4;
   border: solid 2px #7b9af4;
 }
-html body > .content #siteTable .thing .midcol .arrow.down {
+body > .content #siteTable .thing .midcol .arrow.down {
   -webkit-box-shadow: inset #d9d7ce 0px 0px 0px 0px;
   -moz-box-shadow: inset #d9d7ce 0px 0px 0px 0px;
   box-shadow: inset #d9d7ce 0px 0px 0px 0px;
 }
-html body > .content #siteTable .thing .midcol .arrow.downmod {
+body > .content #siteTable .thing .midcol .arrow.downmod {
   -webkit-box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   -moz-box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   background-color: #d9d7ce;
   border: solid 2px #d9d7ce;
 }
-html body > .content #siteTable .thing .thumbnail {
-  background-image: url(%%aeolus-post-sprite%%) !important;
+body > .content #siteTable .thing .thumbnail {
+  background-image: url('%%aeolus-post-sprite%%') !important;
   background-size: 140px 140px !important;
   background-repeat: no-repeat !important;
   background-position: 0px -70px !important;
@@ -1935,10 +2136,10 @@ html body > .content #siteTable .thing .thumbnail {
   height: 70px;
   width: 70px;
 }
-html body > .content #siteTable .thing .entry {
+body > .content #siteTable .thing .entry {
   padding: 10px;
 }
-html body > .content #siteTable .thing .entry > .title .linkflairlabel {
+body > .content #siteTable .thing .entry > .title .linkflairlabel {
   border: solid 1px #2f2f2f;
   background-color: transparent;
   vertical-align: bottom;
@@ -1948,299 +2149,47 @@ html body > .content #siteTable .thing .entry > .title .linkflairlabel {
   padding: 1px 2px;
   opacity: 0.5;
 }
-html body > .content #siteTable .thing .entry .tagline {
+body > .content #siteTable .thing .entry .tagline {
   margin: 5px 0px;
   font-size: 0px;
 }
-html body > .content #siteTable .thing .entry .tagline time {
+body > .content #siteTable .thing .entry .tagline time {
   font-size: 12px;
 }
-html body > .content #siteTable .thing .entry .tagline span,
-html body > .content #siteTable .thing .entry .tagline div,
-html body > .content #siteTable .thing .entry .tagline a,
-html body > .content #siteTable .thing .entry .tagline p {
-  margin: 0px 0px 0px 10px;
-  font-size: 12px;
+body > .content #siteTable .thing .entry .tagline span,
+body > .content #siteTable .thing .entry .tagline div,
+body > .content #siteTable .thing .entry .tagline a,
+body > .content #siteTable .thing .entry .tagline p {
+  margin: 0px 0px 0px 10px !important;
+  font-weight: normal !important;
+  font-size: 12px !important;
 }
-html body > .content #siteTable .thing .entry .buttons {
+body > .content #siteTable .thing .entry .buttons {
   font-weight: normal;
   font-family: Verdana, Arial, Sans-Serif;
 }
-html body > .content #siteTable .thing .entry .buttons li {
-  font-weight: normal;
-  font-family: Verdana, Arial, Sans-Serif;
+body > .content #siteTable .thing .entry .buttons .stamp acronym {
+  border-radius: 0px;
 }
-html body > .content #siteTable .thing .entry .buttons li a {
-  font-weight: normal;
-  font-family: Verdana, Arial, Sans-Serif;
+body > .content #siteTable .thing .entry .buttons a,
+body > .content #siteTable .thing .entry .buttons span,
+body > .content #siteTable .thing .entry .buttons time {
+  font-weight: normal !important;
+  font-family: Verdana, Arial, Sans-Serif !important;
+  font-size: 12px !important;
 }
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body {
+body > .content #siteTable .thing .entry .unvotable-message {
+  border: solid 1px #f4d6d1;
+  color: #2f2f2f;
+  border-radius: 0px;
+}
+body > .content #siteTable .thing .entry .expando .usertext .usertext-body {
   padding: 0px 10px 0px 0px;
 }
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md {
-  padding: 0px 20px 20px 20px;
-  background-color: #ffffff;
-  border-radius: 0px;
-  position: relative;
-  border: none;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md h1 {
-  border-bottom: solid 2px #e6e5df !important;
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 5px 0px !important;
-  font-size: 30px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md h2 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 24px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md h3 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 18px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md h4 {
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 18px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md h5 {
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: bold !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md h6 {
-  margin: 20px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md img {
-  border: solid 1px #e6e5df !important;
-  max-width: 100%;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md p {
-  margin: 20px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a {
-  display: inline-block;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: relative;
-  color: #7b9af4;
-  padding: 2px 2px;
-  z-index: 1;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:visited {
-  color: #7b9af4;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:visited:hover {
-  color: #ffffff;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:visited:hover:before {
-  background-color: #c4c2b4;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:visited:before {
-  background-color: #dbd9d1;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:hover {
-  color: #ffffff;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:hover code {
-  background-color: transparent !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:hover:before {
-  background-color: #7b9af4;
-  height: 100%;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md a:before {
-  background-color: #7b9af4;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: absolute;
-  content: '';
-  z-index: -1;
-  height: 2px;
-  bottom: 0px;
-  width: 100%;
-  left: 0px;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul {
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  list-style: none;
-  display: block;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li ul,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ul li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ol li {
-  background-color: #ffffff;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ul li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ol li:before {
-  background-color: #ffffff;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ul li > ul li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ol li > ul li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ul li > ol li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ul li > ul li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ol li > ul li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ul li > ol li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ul li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol {
-  list-style-position: inside !important;
-  margin: 15px 0px 0px 0px !important;
-  list-style-type: decimal !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  display: block;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li ul,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ul li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ol li {
-  background-color: #ffffff;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ul li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ol li:before {
-  background-color: #ffffff;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ul li > ul li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ol li > ul li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ul li > ol li,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ul li > ul li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ol li > ul li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ul li > ol li:before,
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md ol li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md code {
-  background-color: #f2f1ec !important;
-  display: inline-block !important;
-  padding: 2px 4px !important;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md blockquote {
-  border-left: solid 5px #e6e5df !important;
-  background-color: #f2f1ec !important;
-  padding: 5px 10px 5px 10px !important;
-  margin: 20px 0px 0px 0px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md blockquote p {
-  margin: 5px 0px 5px 0px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md blockquote blockquote {
-  margin: 5px 0px 5px 0px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md pre {
-  background-image: url(%%aeolus-md-pre%%);
-  background-color: #f2f1ec;
-  padding: 18px 10px 18px 52px;
-  margin: 20px 0px 0px 0px;
-  position: relative;
-  line-height: 18px;
-  font-size: 12px;
-  display: block;
-  width: auto;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md pre:before {
-  content: '#  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126  127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193  194  195  196  197  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  225  226  227  228  229  230  231  232  233  234  235  236  237  238  239  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  256  257  258  259  260  261  262  263  264  265  266  267  268  269  270  271  272  273  274  275  276  277  278  279  280  281  282  283  284  285  286  287  288  289  290  291  292  293  294  295  296  297  298  299  300  301  302  303  304  305  306  307  308  309  310  311  312  313  314  315  316  317  318  319  320  321  322  323  324  325  326  327  328  329  330  331  332  333  334  335  336  337  338  339  340  341  342  343  344  345  346  347  348  349  350  351  352  353  354  355  356  357  358  359  360  361  362  363  364  365  366  367  368  369  370  371  372  373  374  375  376  377  378  379  380  381  382  383  384  385  386  387  388  389  390  391  392  393  394  395  396  397  398  399  400  401  402  403  404  405  406  407  408  409  410  411  412  413  414  415  416  417  418  419  420  421  422  423  424  425  426  427  428  429  430  431  432  433  434  435  436  437  438  439  440  441  442  443  444  445  446  447  448  449  450  451  452  453  454  455  456  457  458  459  460  461  462  463  464  465  466  467  468  469  470  471  472  473  474  475  476  477  478  479  480  481  482  483  484  485  486  487  488  489  490  491  492  493  494  495  496  497  498  499  500  ';
-  border-right: solid 2px #c1c1c1;
-  background-color: #f2f1ec;
-  padding: 0px 10px 0px 5px;
-  white-space: pre-wrap;
-  position: absolute;
-  line-height: 18px;
-  text-align: right;
-  overflow: hidden;
-  font-size: 12px;
-  height: 100%;
-  width: 25px;
-  left: 0px;
-  top: 0px;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md pre:after {
-  background-color: #f2f1ec;
-  position: absolute;
-  height: 18px;
-  content: '';
-  bottom: 0px;
-  width: 40px;
-  z-index: 1;
-  left: 0px;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md pre code {
-  background-color: transparent !important;
-  display: block !important;
-  padding: 0px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md table {
-  border-color: #f2f1ec !important;
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md table thead {
-  background-color: #f2f1ec !important;
-}
-html body > .content #siteTable .thing .entry .expando .usertext .usertext-body .md table thead th {
-  font-weight: normal;
-  padding: 2px 4px;
-}
-html body > .content #siteTable > .clearleft {
+body > .content #siteTable > .clearleft {
   height: 20px;
 }
-html body > .content .commentarea .panestack-title {
+.commentarea .panestack-title {
   border-bottom: solid 1px #f2f1ec;
   background-color: #ede6bb;
   text-transform: capitalize;
@@ -2249,17 +2198,17 @@ html body > .content .commentarea .panestack-title {
   color: #2f2f2f;
   padding: 10px;
 }
-html body > .content .commentarea .menuarea {
+.commentarea .menuarea {
   background-color: #ede6bb;
   color: #3c3c3c;
   margin: -20px 0px 20px 0px;
   padding: 10px;
 }
-html body > .content .commentarea .menuarea .spacer {
+.commentarea .menuarea .spacer {
   font-size: 12px !important;
   font-family: Verdana, Arial, Sans-Serif;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices {
+.commentarea .menuarea .spacer .drop-choices {
   -webkit-transition: opacity 0.3s ease, top 0.3s ease;
   -khtml-transition: opacity 0.3s ease, top 0.3s ease;
   -moz-transition: opacity 0.3s ease, top 0.3s ease;
@@ -2273,7 +2222,7 @@ html body > .content .commentarea .menuarea .spacer .drop-choices {
   height: 0px;
   opacity: 0;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices:before {
+.commentarea .menuarea .spacer .drop-choices:before {
   -webkit-transition: background-color 0.3s ease;
   -khtml-transition: background-color 0.3s ease;
   -moz-transition: background-color 0.3s ease;
@@ -2298,7 +2247,7 @@ html body > .content .commentarea .menuarea .spacer .drop-choices:before {
   left: 4px;
   top: 4px;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices.inuse {
+.commentarea .menuarea .spacer .drop-choices.inuse {
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
   -moz-transition: all 0.1s linear;
@@ -2308,7 +2257,7 @@ html body > .content .commentarea .menuarea .spacer .drop-choices.inuse {
   height: auto;
   opacity: 1;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices.inuse:before {
+.commentarea .menuarea .spacer .drop-choices.inuse:before {
   -webkit-transition: background-color 0.1s ease;
   -khtml-transition: background-color 0.1s ease;
   -moz-transition: background-color 0.1s ease;
@@ -2318,14 +2267,14 @@ html body > .content .commentarea .menuarea .spacer .drop-choices.inuse:before {
   height: 20px;
   width: 20px;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices.inuse form a {
+.commentarea .menuarea .spacer .drop-choices.inuse form a {
   padding: 4px 15px;
   height: auto;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices form {
+.commentarea .menuarea .spacer .drop-choices form {
   padding: 0px;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices form a {
+.commentarea .menuarea .spacer .drop-choices form a {
   background-color: #fcfcfb;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -2338,7 +2287,7 @@ html body > .content .commentarea .menuarea .spacer .drop-choices form a {
   overflow: hidden;
   height: 0px;
 }
-html body > .content .commentarea .menuarea .spacer .drop-choices form a:hover {
+.commentarea .menuarea .spacer .drop-choices form a:hover {
   background-color: #f2f1ec;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -2346,7 +2295,7 @@ html body > .content .commentarea .menuarea .spacer .drop-choices form a:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body > .content .commentarea .comment-visits-box {
+.commentarea .comment-visits-box {
   border-bottom: solid 1px #f2f1ec;
   background-color: #ede6bb;
   font-size: 14px !important;
@@ -2360,27 +2309,22 @@ html body > .content .commentarea .comment-visits-box {
   padding: 10px;
   width: auto;
 }
-html body > .content .commentarea .comment-visits-box .title {
+.commentarea .comment-visits-box .title {
   font-weight: normal;
 }
-html body > .content .commentarea #noresults {
-  background-color: #f4d6d1;
-  margin: 0px 0px 20px 0px;
-  padding: 10px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing {
+.commentarea .sitetable.nestedlisting .thing {
   background-color: #f8f8f5;
   margin: 0px 0px 20px 0px;
   padding: 10px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol {
+.commentarea .sitetable.nestedlisting .thing .midcol {
   padding: 10px 0px;
   margin: 0px;
   width: 40px;
   padding: 0px 0px 0px 0px;
   width: 25px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .score {
+.commentarea .sitetable.nestedlisting .thing .midcol .score {
   color: #dddcd4;
   font-weight: normal;
   font-family: Verdana, Arial, Sans-Serif;
@@ -2389,13 +2333,13 @@ html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .score
   height: 20px;
   width: 40px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .score.likes {
+.commentarea .sitetable.nestedlisting .thing .midcol .score.likes {
   color: #7b9af4;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .score.dislikes {
+.commentarea .sitetable.nestedlisting .thing .midcol .score.dislikes {
   color: #d9d7ce;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow {
   border: solid 2px #dddcd4;
   background-image: none !important;
   background-color: transparent;
@@ -2410,322 +2354,64 @@ html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow
   height: 14px;
   width: 14px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow.up {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow.up {
   -webkit-box-shadow: inset #7b9af4 0px 0px 0px 0px;
   -moz-box-shadow: inset #7b9af4 0px 0px 0px 0px;
   box-shadow: inset #7b9af4 0px 0px 0px 0px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow.upmod {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow.upmod {
   -webkit-box-shadow: inset #7b9af4 0px -14px 0px 0px;
   -moz-box-shadow: inset #7b9af4 0px -14px 0px 0px;
   box-shadow: inset #7b9af4 0px -14px 0px 0px;
   background-color: #7b9af4;
   border: solid 2px #7b9af4;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow.down {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow.down {
   -webkit-box-shadow: inset #d9d7ce 0px 0px 0px 0px;
   -moz-box-shadow: inset #d9d7ce 0px 0px 0px 0px;
   box-shadow: inset #d9d7ce 0px 0px 0px 0px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow.downmod {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow.downmod {
   -webkit-box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   -moz-box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   box-shadow: inset #d9d7ce 0px 14px 0px 0px;
   background-color: #d9d7ce;
   border: solid 2px #d9d7ce;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow {
   margin: 0px 0px 0px 0px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .midcol .arrow:first-child {
+.commentarea .sitetable.nestedlisting .thing .midcol .arrow:first-child {
   margin: 0px 0px 5px 0px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container {
+.commentarea .sitetable.nestedlisting .thing .entry .md-container {
   margin: 10px 0px;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md {
-  padding: 0px 10px 10px 10px;
-  background-color: #ffffff;
-  border-radius: 0px;
-  position: relative;
-  border: none;
+.commentarea .sitetable.nestedlisting .thing .entry .md-container .md {
   max-width: 100%;
   width: auto;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h1 {
-  border-bottom: solid 2px #e6e5df !important;
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 5px 0px !important;
-  font-size: 30px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h2 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 24px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h3 {
-  border-bottom: solid 1px #e6e5df !important;
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
+.commentarea .sitetable.nestedlisting .thing .entry .md-container .md h1 {
   font-size: 18px !important;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h4 {
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 18px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h5 {
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: bold !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h6 {
-  margin: 10px 0px 0px 0px !important;
-  color: #2f2f2f !important;
-  font-weight: normal !important;
-  padding: 3px 0px !important;
-  font-size: 14px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md img {
-  border: solid 1px #e6e5df !important;
-  max-width: 100%;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md p {
-  margin: 10px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a {
-  display: inline-block;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: relative;
-  color: #7b9af4;
-  padding: 2px 2px;
-  z-index: 1;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:visited {
-  color: #7b9af4;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:visited:hover {
-  color: #ffffff;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:visited:hover:before {
-  background-color: #c4c2b4;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:visited:before {
-  background-color: #dbd9d1;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:hover {
-  color: #ffffff;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:hover code {
-  background-color: transparent !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:hover:before {
-  background-color: #7b9af4;
-  height: 100%;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md a:before {
-  background-color: #7b9af4;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-  position: absolute;
-  content: '';
-  z-index: -1;
-  height: 2px;
-  bottom: 0px;
-  width: 100%;
-  left: 0px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul {
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  list-style: none;
-  display: block;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li ul,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ul li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ol li {
-  background-color: #ffffff;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ul li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ol li:before {
-  background-color: #ffffff;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ul li > ul li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ol li > ul li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ul li > ol li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ul li > ul li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ol li > ul li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ul li > ol li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ul li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol {
-  list-style-position: inside !important;
-  margin: 15px 0px 0px 0px !important;
-  list-style-type: decimal !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  display: block;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li ul,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li ol {
-  margin: 0px 0px 0px 0px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ul li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ol li {
-  background-color: #ffffff;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ul li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ol li:before {
-  background-color: #ffffff;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ul li > ul li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ol li > ul li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ul li > ol li,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ol li > ol li {
-  background-color: #f8f8f5;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ul li > ul li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ol li > ul li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ul li > ol li:before,
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md ol li > ol li > ol li:before {
-  background-color: #f8f8f5;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md code {
-  background-color: #f2f1ec !important;
-  display: inline-block !important;
-  padding: 2px 4px !important;
-  -webkit-transition: all 0.3s linear;
-  -khtml-transition: all 0.3s linear;
-  -moz-transition: all 0.3s linear;
-  -o-transition: all 0.3s linear;
-  transition: all 0.3s linear;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md blockquote {
-  border-left: solid 5px #e6e5df !important;
-  background-color: #f2f1ec !important;
-  padding: 5px 10px 5px 10px !important;
-  margin: 10px 0px 0px 0px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md blockquote p {
-  margin: 5px 0px 5px 0px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md blockquote blockquote {
-  margin: 5px 0px 5px 0px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md pre {
-  background-image: url(%%aeolus-md-pre%%);
-  background-color: #f2f1ec;
-  padding: 18px 10px 18px 52px;
-  margin: 10px 0px 0px 0px;
-  position: relative;
-  line-height: 18px;
-  font-size: 12px;
-  display: block;
-  width: auto;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md pre:before {
-  content: '#  1  2  3  4  5  6  7  8  9  10  11  12  13  14  15  16  17  18  19  20  21  22  23  24  25  26  27  28  29  30  31  32  33  34  35  36  37  38  39  40  41  42  43  44  45  46  47  48  49  50  51  52  53  54  55  56  57  58  59  60  61  62  63  64  65  66  67  68  69  70  71  72  73  74  75  76  77  78  79  80  81  82  83  84  85  86  87  88  89  90  91  92  93  94  95  96  97  98  99  100  101  102  103  104  105  106  107  108  109  110  111  112  113  114  115  116  117  118  119  120  121  122  123  124  125  126  127  128  129  130  131  132  133  134  135  136  137  138  139  140  141  142  143  144  145  146  147  148  149  150  151  152  153  154  155  156  157  158  159  160  161  162  163  164  165  166  167  168  169  170  171  172  173  174  175  176  177  178  179  180  181  182  183  184  185  186  187  188  189  190  191  192  193  194  195  196  197  198  199  200  201  202  203  204  205  206  207  208  209  210  211  212  213  214  215  216  217  218  219  220  221  222  223  224  225  226  227  228  229  230  231  232  233  234  235  236  237  238  239  240  241  242  243  244  245  246  247  248  249  250  251  252  253  254  255  256  257  258  259  260  261  262  263  264  265  266  267  268  269  270  271  272  273  274  275  276  277  278  279  280  281  282  283  284  285  286  287  288  289  290  291  292  293  294  295  296  297  298  299  300  301  302  303  304  305  306  307  308  309  310  311  312  313  314  315  316  317  318  319  320  321  322  323  324  325  326  327  328  329  330  331  332  333  334  335  336  337  338  339  340  341  342  343  344  345  346  347  348  349  350  351  352  353  354  355  356  357  358  359  360  361  362  363  364  365  366  367  368  369  370  371  372  373  374  375  376  377  378  379  380  381  382  383  384  385  386  387  388  389  390  391  392  393  394  395  396  397  398  399  400  401  402  403  404  405  406  407  408  409  410  411  412  413  414  415  416  417  418  419  420  421  422  423  424  425  426  427  428  429  430  431  432  433  434  435  436  437  438  439  440  441  442  443  444  445  446  447  448  449  450  451  452  453  454  455  456  457  458  459  460  461  462  463  464  465  466  467  468  469  470  471  472  473  474  475  476  477  478  479  480  481  482  483  484  485  486  487  488  489  490  491  492  493  494  495  496  497  498  499  500  ';
-  border-right: solid 2px #c1c1c1;
-  background-color: #f2f1ec;
-  padding: 0px 10px 0px 5px;
-  white-space: pre-wrap;
-  position: absolute;
-  line-height: 18px;
-  text-align: right;
-  overflow: hidden;
-  font-size: 12px;
-  height: 100%;
-  width: 25px;
-  left: 0px;
-  top: 0px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md pre:after {
-  background-color: #f2f1ec;
-  position: absolute;
-  height: 18px;
-  content: '';
-  bottom: 0px;
-  width: 40px;
-  z-index: 1;
-  left: 0px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md pre code {
-  background-color: transparent !important;
-  display: block !important;
-  padding: 0px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md table {
-  border-color: #f2f1ec !important;
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md table thead {
-  background-color: #f2f1ec !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md table thead th {
-  font-weight: normal;
-  padding: 2px 4px;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h1 {
-  font-size: 18px !important;
-}
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h2 {
+.commentarea .sitetable.nestedlisting .thing .entry .md-container .md h2 {
   font-weight: bold !important;
   font-size: 16px !important;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h3 {
+.commentarea .sitetable.nestedlisting .thing .entry .md-container .md h3 {
   font-size: 16px !important;
 }
-html body > .content .commentarea .sitetable.nestedlisting .thing .entry .md-container .md h4 {
+.commentarea .sitetable.nestedlisting .thing .entry .md-container .md h4 {
   font-size: 16px !important;
 }
-html body .footer-parent {
+.footer-parent {
   padding: 5px 0px 0px 0px;
   margin: 0px 320px 0px 0px;
   display: block;
   clear: none;
   width: auto;
 }
-html body .footer-parent .footer {
+.footer-parent .footer {
   background-color: transparent;
   border-radius: 0px;
   position: relative;
@@ -2736,7 +2422,7 @@ html body .footer-parent .footer {
   margin: 0px;
   width: auto;
 }
-html body .footer-parent .footer .col {
+.footer-parent .footer .col {
   border: none !important;
   float: none !important;
   display: block;
@@ -2745,17 +2431,17 @@ html body .footer-parent .footer .col {
   margin: 0px;
   width: auto;
 }
-html body .footer-parent .footer .col ul {
+.footer-parent .footer .col ul {
   padding: 0px;
 }
-html body .footer-parent .footer .col ul:hover li {
+.footer-parent .footer .col ul:hover li {
   color: #f8f8f5;
 }
-html body .footer-parent .footer .col ul:hover li a {
+.footer-parent .footer .col ul:hover li a {
   background-color: #e2e0d9;
   color: #2f2f2f;
 }
-html body .footer-parent .footer .col ul li {
+.footer-parent .footer .col ul li {
   text-transform: capitalize;
   font-size: 12px !important;
   display: inline-block;
@@ -2771,13 +2457,13 @@ html body .footer-parent .footer .col ul li {
   height: 30px;
   width: auto;
 }
-html body .footer-parent .footer .col ul li.title {
+.footer-parent .footer .col ul li.title {
   border: solid 2px #e2e0d9;
   text-align: right;
   padding: 0px 10px;
   width: 50px;
 }
-html body .footer-parent .footer .col ul li a {
+.footer-parent .footer .col ul li a {
   display: inline-block;
   -webkit-transition: all 0.3s linear;
   -khtml-transition: all 0.3s linear;
@@ -2789,7 +2475,7 @@ html body .footer-parent .footer .col ul li a {
   color: #e2e0d9;
   height: 34px;
 }
-html body .footer-parent .footer .col ul li a:hover {
+.footer-parent .footer .col ul li a:hover {
   background-color: #f8f8f5;
   text-decoration: none;
   -webkit-transition: all 0.1s linear;
@@ -2799,7 +2485,7 @@ html body .footer-parent .footer .col ul li a:hover {
   transition: all 0.1s linear;
   color: #2f2f2f;
 }
-html body .footer-parent .bottommenu {
+.footer-parent .bottommenu {
   padding: 5px 0px;
   display: block;
   color: #e2e0d9;
@@ -2807,7 +2493,13 @@ html body .footer-parent .bottommenu {
   clear: none;
   width: auto;
 }
-html body #RESMainGearOverlay {
+.footer-parent .bottommenu a {
+  color: #e2e0d9;
+}
+.footer-parent .bottommenu a:hover {
+  text-decoration: none;
+}
+#RESMainGearOverlay {
   background-color: #f2f1ec !important;
   margin: -1px 0px 0px 7px !important;
   vertical-align: middle !important;
@@ -2822,15 +2514,16 @@ html body #RESMainGearOverlay {
   height: 40px !important;
   border: none !important;
   width: 40px !important;
-  background-image: url(%%aeolus-sprite%%) !important;
+  background-image: url('%%aeolus-sprite%%') !important;
   background-repeat: no-repeat !important;
   background-size: 160px 120px !important;
   background-position: -80px 0px !important;
+  cursor: pointer;
 }
-html body #RESMainGearOverlay .gearIcon {
+#RESMainGearOverlay .gearIcon {
   display: none !important;
 }
-html body #RESMainGearOverlay:hover {
+#RESMainGearOverlay:hover {
   background-color: #f2f1ec !important;
   -webkit-transition: all 0.1s linear;
   -khtml-transition: all 0.1s linear;
@@ -2838,31 +2531,31 @@ html body #RESMainGearOverlay:hover {
   -o-transition: all 0.1s linear;
   transition: all 0.1s linear;
 }
-html body #RESPrefsDropdown {
+#RESPrefsDropdown {
   margin: -1px 341px 0px 0px;
 }
 @media all and (max-width: 1852px) {
-  html body #RESPrefsDropdown {
+  #RESPrefsDropdown {
     margin: -1px 200px 0px 0px !important;
   }
 }
 @media all and (max-width: 1802px) {
-  html body #RESPrefsDropdown {
+  #RESPrefsDropdown {
     margin: -1px 150px 0px 0px !important;
   }
 }
 @media all and (max-width: 1702px) {
-  html body #RESPrefsDropdown {
+  #RESPrefsDropdown {
     margin: -1px 100px 0px 0px !important;
   }
 }
 @media all and (max-width: 1652px) {
-  html body #RESPrefsDropdown {
+  #RESPrefsDropdown {
     margin: -1px 50px 0px 0px !important;
   }
 }
 @media all and (max-width: 1602px) {
-  html body #RESPrefsDropdown {
+  #RESPrefsDropdown {
     margin: -1px 0px 0px 0px !important;
   }
 }
