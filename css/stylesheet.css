@@ -1,6 +1,6 @@
 /*
-  Aeolus v0.0.1.5 (http://www.reddit.com/r/Aeolus)
-  Copyright (c) 2014 Timur Kuzhagaliyev (TimboKZ)
+  Aeolus v0.0.1.6 (http://www.reddit.com/r/Aeolus)
+  Copyright (c) 2015 Timur Kuzhagaliyev (TimboKZ)
 */
 .md {
   padding: 0px 20px 20px 20px;
@@ -89,6 +89,7 @@
 }
 .md a:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 .md a:hover code {
   background-color: transparent !important;
@@ -112,17 +113,27 @@
   width: 100%;
   left: 0px;
 }
+.md ul,
+.md ol {
+  padding-left: 0;
+}
+.md ul p,
+.md ol p {
+  margin: 0px !important;
+}
+.md ul li,
+.md ol li {
+  background-color: #f8f8f5;
+  padding: 5px 10px 5px 10px;
+  margin: 5px 0px 0px 0px;
+}
 .md ul {
-  margin: 15px 0px 0px 0px !important;
+  margin: 15px 0 0 0 !important;
   line-height: 20px !important;
   font-size: 14px !important;
+  padding-left: 0;
   list-style: none;
   display: block;
-}
-.md ul li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
 }
 .md ul li ul,
 .md ul li ol {
@@ -150,20 +161,16 @@
 }
 .md ol {
   list-style-position: inside !important;
-  margin: 15px 0px 0px 0px !important;
   list-style-type: decimal !important;
+  margin: 15px 0 0 0 !important;
   line-height: 20px !important;
   font-size: 14px !important;
+  padding-left: 0;
   display: block;
-}
-.md ol li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
 }
 .md ol li ul,
 .md ol li ol {
-  margin: 0px 0px 0px 0px !important;
+  margin: 0 !important;
 }
 .md ol li > ul li,
 .md ol li > ol li {
@@ -199,19 +206,26 @@
   border-left: solid 5px #e6e5df !important;
   background-color: #f2f1ec !important;
   padding: 5px 10px 5px 10px !important;
-  margin: 20px 0px 0px 0px !important;
+  margin: 20px 0 0 0 !important;
 }
 .md blockquote p {
-  margin: 5px 0px 5px 0px !important;
+  margin: 5px 0 5px 0 !important;
 }
 .md blockquote blockquote {
-  margin: 5px 0px 5px 0px !important;
+  margin: 5px 0 5px 0 !important;
+}
+.md hr {
+  margin: 20px -20px 0px -20px !important;
+  background-color: #f2f1ec;
+  overflow: visible;
+  border: none;
+  height: 5px;
 }
 .md pre {
   background-image: url(%%aeolus-md-pre%%);
   background-color: #f2f1ec;
   padding: 18px 10px 18px 52px;
-  margin: 20px 0px 0px 0px;
+  margin: 20px 0 0 0;
   position: relative;
   line-height: 18px;
   font-size: 12px;
@@ -250,24 +264,37 @@
   padding: 0px !important;
 }
 .md table {
-  border-color: #f2f1ec !important;
   margin: 15px 0px 0px 0px !important;
   line-height: 20px !important;
   font-size: 14px !important;
+  border: none !important;
 }
 .md table thead {
-  background-color: #f2f1ec !important;
+  background-color: #999999 !important;
+  color: #ffffff;
 }
 .md table thead th {
   font-weight: normal;
-  padding: 2px 4px;
+  padding: 5px 15px;
+  border: none;
+}
+.md table tbody tr {
+  border-bottom: solid 1px #c1c1c1;
+  background-color: #f8f8f5;
+}
+.md table tbody tr td {
+  padding: 5px 15px;
+  border: none;
+}
+body {
+  background-image: url('%%aeolus-bg%%');
 }
 body {
   background-color: #c1c1c1;
   max-width: 1280px;
   font-family: Verdana, Arial, Sans-Serif;
-  padding: 0px 20px;
-  margin: 0px auto;
+  padding: 0 20px;
+  margin: 0 auto;
 }
 #header {
   background-color: transparent;
@@ -942,6 +969,7 @@ body {
 .commentarea .md a:hover,
 .infobar .md a:hover {
   color: #ffffff;
+  text-decoration: none;
 }
 .side .md a:hover code,
 .commentarea .md a:hover code,
@@ -973,19 +1001,39 @@ body {
 }
 .side .md ul,
 .commentarea .md ul,
-.infobar .md ul {
-  margin: 15px 0px 0px 0px !important;
-  line-height: 20px !important;
-  font-size: 14px !important;
-  list-style: none;
-  display: block;
+.infobar .md ul,
+.side .md ol,
+.commentarea .md ol,
+.infobar .md ol {
+  padding-left: 0;
+}
+.side .md ul p,
+.commentarea .md ul p,
+.infobar .md ul p,
+.side .md ol p,
+.commentarea .md ol p,
+.infobar .md ol p {
+  margin: 0px !important;
 }
 .side .md ul li,
 .commentarea .md ul li,
-.infobar .md ul li {
+.infobar .md ul li,
+.side .md ol li,
+.commentarea .md ol li,
+.infobar .md ol li {
   background-color: #f8f8f5;
+  padding: 5px 10px 5px 10px;
   margin: 5px 0px 0px 0px;
-  padding: 5px;
+}
+.side .md ul,
+.commentarea .md ul,
+.infobar .md ul {
+  margin: 15px 0 0 0 !important;
+  line-height: 20px !important;
+  font-size: 14px !important;
+  padding-left: 0;
+  list-style: none;
+  display: block;
 }
 .side .md ul li ul,
 .commentarea .md ul li ul,
@@ -1043,18 +1091,12 @@ body {
 .commentarea .md ol,
 .infobar .md ol {
   list-style-position: inside !important;
-  margin: 15px 0px 0px 0px !important;
   list-style-type: decimal !important;
+  margin: 15px 0 0 0 !important;
   line-height: 20px !important;
   font-size: 14px !important;
+  padding-left: 0;
   display: block;
-}
-.side .md ol li,
-.commentarea .md ol li,
-.infobar .md ol li {
-  background-color: #f8f8f5;
-  margin: 5px 0px 0px 0px;
-  padding: 5px;
 }
 .side .md ol li ul,
 .commentarea .md ol li ul,
@@ -1062,7 +1104,7 @@ body {
 .side .md ol li ol,
 .commentarea .md ol li ol,
 .infobar .md ol li ol {
-  margin: 0px 0px 0px 0px !important;
+  margin: 0 !important;
 }
 .side .md ol li > ul li,
 .commentarea .md ol li > ul li,
@@ -1126,17 +1168,26 @@ body {
   border-left: solid 5px #e6e5df !important;
   background-color: #f2f1ec !important;
   padding: 5px 10px 5px 10px !important;
-  margin: 10px 0px 0px 0px !important;
+  margin: 10px 0 0 0 !important;
 }
 .side .md blockquote p,
 .commentarea .md blockquote p,
 .infobar .md blockquote p {
-  margin: 5px 0px 5px 0px !important;
+  margin: 5px 0 5px 0 !important;
 }
 .side .md blockquote blockquote,
 .commentarea .md blockquote blockquote,
 .infobar .md blockquote blockquote {
-  margin: 5px 0px 5px 0px !important;
+  margin: 5px 0 5px 0 !important;
+}
+.side .md hr,
+.commentarea .md hr,
+.infobar .md hr {
+  margin: 20px -10px 0px -10px !important;
+  background-color: #f2f1ec;
+  overflow: visible;
+  border: none;
+  height: 5px;
 }
 .side .md pre,
 .commentarea .md pre,
@@ -1144,7 +1195,7 @@ body {
   background-image: url(%%aeolus-md-pre%%);
   background-color: #f2f1ec;
   padding: 18px 10px 18px 52px;
-  margin: 10px 0px 0px 0px;
+  margin: 10px 0 0 0;
   position: relative;
   line-height: 18px;
   font-size: 12px;
@@ -1191,21 +1242,35 @@ body {
 .side .md table,
 .commentarea .md table,
 .infobar .md table {
-  border-color: #f2f1ec !important;
   margin: 15px 0px 0px 0px !important;
   line-height: 20px !important;
   font-size: 14px !important;
+  border: none !important;
 }
 .side .md table thead,
 .commentarea .md table thead,
 .infobar .md table thead {
-  background-color: #f2f1ec !important;
+  background-color: #999999 !important;
+  color: #ffffff;
 }
 .side .md table thead th,
 .commentarea .md table thead th,
 .infobar .md table thead th {
   font-weight: normal;
-  padding: 2px 4px;
+  padding: 5px 15px;
+  border: none;
+}
+.side .md table tbody tr,
+.commentarea .md table tbody tr,
+.infobar .md table tbody tr {
+  border-bottom: solid 1px #c1c1c1;
+  background-color: #f8f8f5;
+}
+.side .md table tbody tr td,
+.commentarea .md table tbody tr td,
+.infobar .md table tbody tr td {
+  padding: 5px 15px;
+  border: none;
 }
 .side {
   background-color: transparent;
@@ -1354,6 +1419,9 @@ body {
 .side .spacer .sidebox.create .spacer .subtitle:nth-child(odd):before {
   content: '...for Aeolus.';
 }
+.side .spacer .titlebox {
+  position: relative;
+}
 .side .spacer .titlebox .redditname {
   padding: 0px 0px 10px 43px;
   font-weight: normal;
@@ -1385,13 +1453,14 @@ body {
 }
 .side .spacer .titlebox .subscribe-button {
   background-color: transparent;
-  margin: -43px 0px 0px 0px;
   font-weight: normal;
   position: absolute;
+  margin: 0 0 0 0;
   display: block;
   padding: 0px;
   height: 33px;
   width: 33px;
+  top: 0;
 }
 .side .spacer .titlebox .subscribe-button .option {
   -webkit-transition: all 0.3s ease;
@@ -1749,6 +1818,9 @@ body {
   position: relative;
   z-index: 99;
 }
+.wiki-page-content .md .toc li {
+  padding: 0px 5px !important;
+}
 .wiki-page-content .md .toc a:hover,
 .wiki-page-content .md .toc a:visited:hover {
   color: #7b9af4;
@@ -1970,33 +2042,35 @@ body {
   margin: 20px 0px 0px 0px;
   padding: 10px;
 }
+.res-commentBoxes body > .content {
+  padding: 20px 20px 1px 20px !important;
+}
 body > .content {
+  padding: 20px 20px 1px 20px !important;
   background-color: #f2f1ec;
-  padding: 20px 20px 20px 20px;
-  margin: 0px 320px 0px 0px;
+  margin: 0 320px 20px 0;
   position: relative;
 }
 body > .content:after {
-  content: 'Aeolus CSS v0.0.1.5 (/r/Aeolus)';
-  background-color: #c1c1c1;
+  content: 'Aeolus CSS v0.0.1.6 (/r/Aeolus)';
   color: #e6e5df;
   position: absolute;
   line-height: 20px;
   text-align: left;
+  bottom: -20px;
   height: 20px;
-  bottom: 0px;
   width: 100%;
   clear: both;
-  left: 0px;
+  left: 0;
 }
-body > .content > span:first-child {
+body > .content > span {
   border: solid 2px #e6e5df;
   margin: 0px 0px 20px 0px;
   color: #2f2f2f;
   display: block;
   padding: 10px;
 }
-body > .content > span:first-child .wikititle strong {
+body > .content > span .wikititle strong {
   text-transform: capitalize;
   font-weight: normal;
   font-family: Verdana, Arial, Sans-Serif;
