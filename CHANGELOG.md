@@ -1,6 +1,10 @@
 Aeolus Changelog
 ============
 
+**v0.0.1.7** 28 Mar 2015
+
+* Fixed user bar when RES' `navTop` is switched on
+
 **v0.0.1.6** 27 Mar 2015
 
 * Improved table styling
