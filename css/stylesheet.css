@@ -2053,7 +2053,7 @@ body > .content {
   position: relative;
 }
 body > .content:after {
-  content: 'Aeolus CSS v0.0.1.6 (/r/Aeolus)';
+  content: 'Aeolus CSS v0.0.1.7 (/r/Aeolus)';
   color: #e6e5df;
   position: absolute;
   line-height: 20px;
